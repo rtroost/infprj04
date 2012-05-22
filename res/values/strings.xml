@@ -3,5 +3,8 @@
 
     <string name="hello">Hello World, Project4Activity!</string>
     <string name="app_name">Project4</string>
+    <color name="amnastyyellow">#FFF200</color>
+    <color name="black">#000000</color>
+    <color name="gray">#666</color>
 
 </resources>

@@ -4,6 +4,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.project4.R;
@@ -16,7 +17,7 @@ import android.widget.ImageView;
 
 public class Project4Activity extends Activity {
 	
-	private Button closeButton;
+	//private Button closeButton;
 	public int currentimageindex=0;
     Timer timer;
     TimerTask task;
@@ -33,14 +34,21 @@ public class Project4Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        this.closeButton = (Button)this.findViewById(R.id.search);
-        this.closeButton.setOnClickListener(new OnClickListener() {
+        /*
+         * Header bar
+         */
+        Button closeButton = (Button)this.findViewById(R.id.search);
+        closeButton.setOnClickListener(new OnClickListener() {
           public void onClick(View view) {
         	System.out.println("hallo");
             finish(); //finish sluit de app;
           }
         });
+        /*
+         * End Header bar
+         */
         
+        // begin slider
         final Handler mHandler = new Handler();
         // Create runnable for posting
         final Runnable mUpdateResults = new Runnable() {
@@ -58,6 +66,15 @@ public class Project4Activity extends Activity {
              mHandler.post(mUpdateResults);
         }
         }, delay, period);
+        // end slider
+        
+        Button b = (Button) findViewById(R.id.projecten);
+        b.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+           Intent i = new Intent(Project4Activity.this, Projecten.class);
+           startActivity(i);
+           }
+        });
     }
     
     /**

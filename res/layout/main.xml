@@ -62,6 +62,12 @@
 	    android:layout_height="150dip"
 	    android:layout_gravity="center_vertical|center_horizontal"
 	    ></ImageView>
+
+    <Button
+        android:id="@+id/projecten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Projecten" />
     
 <TabHost
     android:id="@android:id/tabhost"

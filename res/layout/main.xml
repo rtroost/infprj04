@@ -3,14 +3,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center|top"
-    android:orientation="vertical" >
+    android:orientation="vertical" >
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="30dip"
+        android:background="@color/amnastyyellow"
         android:columnCount="3"
-        android:rowCount="1"
-        android:background="@color/amnastyyellow" >
-
+        android:rowCount="1" >
+
         <Button
             android:id="@+id/button1"
             android:layout_width="34dp"
@@ -33,7 +34,7 @@
             android:text="Amnesty International"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/black" />
-
+
         <Button
             android:id="@+id/search"
             android:layout_width="34dp"
@@ -43,72 +44,47 @@
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:background="@drawable/search" />
-
     </GridLayout>
-    
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="2dip"
-        android:columnCount="3"
-        android:rowCount="1"
-        android:background="@color/gray" >
-
-
+        android:background="@color/gray"
+        android:columnCount="2"
+        android:rowCount="1" >
     </GridLayout>
-
-    <ImageView
-	    android:id="@+id/ImageSlider"
-	    android:layout_width="match_parent"
-	    android:layout_height="150dip"
-	    android:layout_gravity="center_vertical|center_horizontal"
-	    ></ImageView>
-
-    <Button
-        android:id="@+id/projecten"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Projecten" />
-    
-<TabHost
-    android:id="@android:id/tabhost"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/projecten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Projecten" />
 
-        <TabWidget
-            android:id="@android:id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-        </TabWidget>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.38"
+            android:text="Button" />
 
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <LinearLayout
-                android:id="@+id/tab1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tab2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tab3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-            </LinearLayout>
-        </FrameLayout>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </LinearLayout>
-</TabHost>
+    
+    <ImageView
+        android:id="@+id/ImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:layout_gravity="center_vertical|center_horizontal" >
+    </ImageView>
+
+    
 
 </LinearLayout>

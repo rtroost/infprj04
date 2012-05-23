@@ -32,13 +32,12 @@ public final class R {
         public static final int search_2=0x7f020008;
     }
     public static final class id {
-        public static final int ImageSlider=0x7f080003;
+        public static final int ImageSlider=0x7f080006;
         public static final int button1=0x7f080000;
-        public static final int projecten=0x7f080004;
+        public static final int button2=0x7f080004;
+        public static final int button3=0x7f080005;
+        public static final int projecten=0x7f080003;
         public static final int search=0x7f080002;
-        public static final int tab1=0x7f080005;
-        public static final int tab2=0x7f080006;
-        public static final int tab3=0x7f080007;
         public static final int textView1=0x7f080001;
     }
     public static final class layout {

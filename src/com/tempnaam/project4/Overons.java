@@ -1,6 +1,7 @@
 package com.tempnaam.project4;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.project4.R;
 import android.view.View;
@@ -23,6 +24,14 @@ public class Overons extends Activity {
         	System.out.println("hallo");
             finish(); //finish sluit de app;
           }
+        });
+        
+        Button overons = (Button) findViewById(R.id.overons);
+        overons.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent overons_i = new Intent(Overons.this, Overons.class);
+        	   startActivity(overons_i);
+           }
         });
         /*
          * End Header bar

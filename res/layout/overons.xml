@@ -58,8 +58,7 @@
 
 
     </GridLayout>
-
-    <LinearLayout
+	<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
@@ -70,31 +69,36 @@
             android:layout_height="wrap_content"
             android:text="Contactgegevens:"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <EditText
+
+
+        <TextView
+            
             android:id="@+id/contactgegevensText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine" android:text="Telefoon: 020 - 626 44 36                              Email: amnesty@amnesty.nl                           Postbus 1968                                                                             1000 BZ Amsterdam                                                         IBAN-code: NL42INGB0000454000         BIC(SWIFT):INGBNL2A">
-
-            <requestFocus />
-        </EditText>
+            android:textSize="15dp"
+            android:text="Telefoon: 020 - 626 44 36                              Email: amnesty@amnesty.nl                           Postbus 1968                                                                             1000 BZ Amsterdam                                                         IBAN-code: NL42INGB0000454000         BIC(SWIFT):INGBNL2A"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+        />
 
         <TextView
             android:id="@+id/overamnesty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Over Amnasty International:"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
 
-        <EditText
+        <TextView
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine" android:text="Amnesty International is een onafhankelijke beweging die zich inzet voor slachtoffers van schendingen van mensenrechten. Amnesty heeft 3 miljoen leden, donateurs en vaste begunstigers in meer dan 150 landen. Amnesty Nederland is met bijna 300.000 leden één van de grootste afdelingen.                                                                                                                                                                                     Amnesty International werkt voor naleving van de Universele Verklaring van de Rechten van de Mens en andere internationale verdragen en verklaringen voor de mensenrechten. Wij doen over de hele wereld onderzoek naar schendingen van de mensenrechten en voeren actie om die schendingen tegen te gaan."/>
+            android:textSize="15dp"
+            android:text="Amnesty International is een onafhankelijke beweging die zich inzet voor slachtoffers van schendingen van mensenrechten. Amnesty heeft 3 miljoen leden, donateurs en vaste begunstigers in meer dan 150 landen. Amnesty Nederland is met bijna 300.000 leden één van de grootste afdelingen.                                                                                                                                                                                     Amnesty International werkt voor naleving van de Universele Verklaring van de Rechten van de Mens en andere internationale verdragen en verklaringen voor de mensenrechten. Wij doen over de hele wereld onderzoek naar schendingen van de mensenrechten en voeren actie om die schendingen tegen te gaan."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+        />
 
     </LinearLayout>
+    
 
 </LinearLayout>

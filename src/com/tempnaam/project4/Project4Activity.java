@@ -76,10 +76,10 @@ public class Project4Activity extends Activity {
         }, delay, period);
         // end slider
         
-        Button projecten = (Button) findViewById(R.id.projecten);
-        projecten.setOnClickListener(new View.OnClickListener() {
+        Button themas = (Button) findViewById(R.id.themas);
+        themas.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
-        	   Intent i = new Intent(Project4Activity.this, Projecten.class);
+        	   Intent i = new Intent(Project4Activity.this, Themas.class);
         	   startActivity(i);
            }
         });

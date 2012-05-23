@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center|top"
+    android:orientation="vertical" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:columnCount="3"
+        android:rowCount="1"
+        android:background="@color/amnastyyellow" >
+
+
+        <Button
+            android:id="@+id/overons"
+            android:layout_width="34dp"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_gravity="bottom"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:background="@drawable/options" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="248dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:layout_gravity="fill_vertical"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:gravity="fill_vertical|center_vertical|center_horizontal"
+            android:text="Over Amnesty"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="34dp"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_gravity="bottom|right"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:background="@drawable/search" />
+
+    </GridLayout>
+    
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:columnCount="3"
+        android:rowCount="1"
+        android:background="@color/gray" >
+
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/contactgegevens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contactgegevens:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/contactgegevensText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" android:text="Telefoon: 020 - 626 44 36                              Email: amnesty@amnesty.nl                           Postbus 1968                                                                             1000 BZ Amsterdam                                                         IBAN-code: NL42INGB0000454000         BIC(SWIFT):INGBNL2A">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/overamnesty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Over Amnasty International:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" android:text="Amnesty International is een onafhankelijke beweging die zich inzet voor slachtoffers van schendingen van mensenrechten. Amnesty heeft 3 miljoen leden, donateurs en vaste begunstigers in meer dan 150 landen. Amnesty Nederland is met bijna 300.000 leden één van de grootste afdelingen.                                                                                                                                                                                     Amnesty International werkt voor naleving van de Universele Verklaring van de Rechten van de Mens en andere internationale verdragen en verklaringen voor de mensenrechten. Wij doen over de hele wereld onderzoek naar schendingen van de mensenrechten en voeren actie om die schendingen tegen te gaan."/>
+
+    </LinearLayout>
+
+</LinearLayout>

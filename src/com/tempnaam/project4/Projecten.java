@@ -4,6 +4,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.project4.R;
@@ -27,6 +28,14 @@ public class Projecten extends Activity {
         	System.out.println("hallo");
             finish(); //finish sluit de app;
           }
+        });
+        
+        Button overons = (Button) findViewById(R.id.overons);
+        overons.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent overons_i = new Intent(Projecten.this, Overons.class);
+        	   startActivity(overons_i);
+           }
         });
         /*
          * End Header bar

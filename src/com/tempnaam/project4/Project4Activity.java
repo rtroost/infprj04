@@ -44,6 +44,14 @@ public class Project4Activity extends Activity {
             finish(); //finish sluit de app;
           }
         });
+        
+        Button overons = (Button) findViewById(R.id.overons);
+        overons.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent overons_i = new Intent(Project4Activity.this, Overons.class);
+        	   startActivity(overons_i);
+           }
+        });
         /*
          * End Header bar
          */
@@ -68,13 +76,15 @@ public class Project4Activity extends Activity {
         }, delay, period);
         // end slider
         
-        Button b = (Button) findViewById(R.id.projecten);
-        b.setOnClickListener(new View.OnClickListener() {
+        Button projecten = (Button) findViewById(R.id.projecten);
+        projecten.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
         	   Intent i = new Intent(Project4Activity.this, Projecten.class);
         	   startActivity(i);
            }
         });
+        
+       
     }
     
     /**

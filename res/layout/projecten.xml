@@ -14,7 +14,7 @@
 
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/overons"
             android:layout_width="34dp"
             android:layout_height="match_parent"
             android:layout_column="0"
@@ -58,4 +58,47 @@
 
 
     </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thema&apos;s"
+            android:textSize="20px"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="16px"
+            android:inputType="textPersonName"
+            android:text="bedrijven en mensenrechten" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:singleLine="false"
+            android:text="Bedrijven hebben de verantwoordelijkheid om de mensenrechten te respecteren. Hun eigen bedrijfsvoering, en die van de keten van hun toeleveranciers en andere zakenrelaties, mag niet bijdragen aan mensenrechtenschendingen. Amnesty International spreekt de bedrijven met name aan op hun verantwoordelijkheid ten opzichte van lokale gemeenschappen."
+            android:textSize="12px" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" >
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
 </LinearLayout>

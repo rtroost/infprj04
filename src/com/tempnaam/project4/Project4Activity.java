@@ -71,8 +71,8 @@ public class Project4Activity extends Activity {
         Button b = (Button) findViewById(R.id.projecten);
         b.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
-           Intent i = new Intent(Project4Activity.this, Projecten.class);
-           startActivity(i);
+        	   Intent i = new Intent(Project4Activity.this, Projecten.class);
+        	   startActivity(i);
            }
         });
     }

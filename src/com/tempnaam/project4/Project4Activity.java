@@ -84,6 +84,14 @@ public class Project4Activity extends Activity {
            }
         });
         
+        Button steunonsButton = (Button) findViewById(R.id.steunons);
+        steunonsButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Project4Activity.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
+        
        
     }
     

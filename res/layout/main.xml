@@ -79,11 +79,11 @@
             android:text="Projecten" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/steunons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.38"
-            android:text="Button"
+            android:text="Steun Ons"
             android:background="@drawable/button" />
 
         <Button

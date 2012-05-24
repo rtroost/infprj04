@@ -1,92 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center|top"
-    android:orientation="vertical" >
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/android:list"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" >
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dip"
-        android:columnCount="3"
-        android:rowCount="1"
-        android:background="@color/amnastyyellow" >
-
-
-        <Button
-            android:id="@+id/overons"
-            android:layout_width="34dp"
-            android:layout_height="match_parent"
-            android:layout_column="0"
-            android:layout_gravity="bottom"
-            android:layout_row="0"
-            android:layout_rowSpan="2"
-            android:background="@drawable/about" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="248dp"
-            android:layout_height="match_parent"
-            android:layout_column="1"
-            android:layout_gravity="fill_vertical"
-            android:layout_row="0"
-            android:layout_rowSpan="2"
-            android:gravity="fill_vertical|center_vertical|center_horizontal"
-            android:text="Over Amnesty"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/black" />
-
-
-        <Button
-            android:id="@+id/search"
-            android:layout_width="34dp"
-            android:layout_height="match_parent"
-            android:layout_column="2"
-            android:layout_gravity="bottom|right"
-            android:layout_row="0"
-            android:layout_rowSpan="2"
-            android:background="@drawable/search" />
-
-    </GridLayout>
-    
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="2dip"
-        android:columnCount="3"
-        android:rowCount="1"
-        android:background="@color/gray" >
-
-
-    </GridLayout>
-
-	<LinearLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center|top"
 	    android:orientation="vertical" >
-
-	    <TextView
-	        android:id="@+id/contactgegevens"
+	
+	    <GridLayout
 	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:text="Contactgegevens:"
-	        android:textAppearance="?android:attr/textAppearanceLarge" 
-	        android:paddingBottom="10dp" 
-	        android:paddingLeft="10dp" 
-	        android:paddingTop="10dp"/>
-
-	    <TextView
-	        android:id="@+id/contactgegevensText"
-	        android:layout_width="291dp"
-	        android:layout_height="wrap_content"
-	        android:text="Telefoon: 020 - 626 44 36                              Email: amnesty@amnesty.nl                           Postbus 1968                                                                             1000 BZ Amsterdam                                                         IBAN-code: NL42INGB0000454000         BIC(SWIFT):INGBNL2A"
-	        android:textAppearance="?android:attr/textAppearanceLarge"
-	        android:textSize="15dp" 
-	        android:paddingLeft="20dp"
-	        android:paddingRight="20dp" 
-	        android:paddingBottom="10dp"/>
-
-	    <TextView
-	        android:id="@+id/overamnesty"
+	        android:layout_height="30dip"
+	        android:columnCount="3"
+	        android:rowCount="1"
+	        android:background="@color/amnastyyellow" >
+	
+	
+	        <Button
+	            android:id="@+id/overons"
+	            android:layout_width="34dp"
+	            android:layout_height="match_parent"
+	            android:layout_column="0"
+	            android:layout_gravity="bottom"
+	            android:layout_row="0"
+	            android:layout_rowSpan="2"
+	            android:background="@drawable/about" />
+	
+	        <TextView
+	            android:id="@+id/textView1"
+	            android:layout_width="248dp"
+	            android:layout_height="match_parent"
+	            android:layout_column="1"
+	            android:layout_gravity="fill_vertical"
+	            android:layout_row="0"
+	            android:layout_rowSpan="2"
+	            android:gravity="fill_vertical|center_vertical|center_horizontal"
+	            android:text="Over Amnesty"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textColor="@color/black" />
+	
+	
+	        <Button
+	            android:id="@+id/search"
+	            android:layout_width="34dp"
+	            android:layout_height="match_parent"
+	            android:layout_column="2"
+	            android:layout_gravity="bottom|right"
+	            android:layout_row="0"
+	            android:layout_rowSpan="2"
+	            android:background="@drawable/search" />
+	
+	    </GridLayout>
+	    
+	    <GridLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="2dip"
+	        android:columnCount="3"
+	        android:rowCount="1"
+	        android:background="@color/gray" >
+	
+	
+	    </GridLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical" >
+		
+		    <TextView
+		        android:id="@+id/contactgegevens"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Contactgegevens:"
+		        android:textAppearance="?android:attr/textAppearanceLarge" 
+		        android:paddingBottom="10dp" 
+		        android:paddingLeft="10dp" 
+		        android:paddingTop="10dp"/>
+			
+		    <TextView
+		        android:id="@+id/contactgegevensText"
+		        android:layout_width="291dp"
+		        android:layout_height="wrap_content"
+		        android:text="Telefoon: 020 - 626 44 36                              Email: amnesty@amnesty.nl                           Postbus 1968                                                                             1000 BZ Amsterdam                                                         IBAN-code: NL42INGB0000454000         BIC(SWIFT):INGBNL2A"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textSize="15dp" 
+		        android:paddingLeft="20dp"
+		        android:paddingRight="20dp" 
+		        android:paddingBottom="10dp"/>
+		
+		    <TextView
+		        android:id="@+id/overamnesty"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:text="Over Amnasty International:"
@@ -103,6 +109,7 @@
 	        android:textSize="15dp" 
 	        android:paddingLeft="20dp" 
 	        android:paddingRight="20dp"/>
-	</LinearLayout>
+		</LinearLayout>
 
-</LinearLayout>
+	</LinearLayout>
+</ScrollView>

@@ -34,6 +34,17 @@ public final class R {
         public static final int options_2=0x7f02000a;
         public static final int search=0x7f02000b;
         public static final int search_2=0x7f02000c;
+        public static final int thema1=0x7f02000d;
+        public static final int thema10=0x7f02000e;
+        public static final int thema11=0x7f02000f;
+        public static final int thema2=0x7f020010;
+        public static final int thema3=0x7f020011;
+        public static final int thema4=0x7f020012;
+        public static final int thema5=0x7f020013;
+        public static final int thema6=0x7f020014;
+        public static final int thema7=0x7f020015;
+        public static final int thema8=0x7f020016;
+        public static final int thema9=0x7f020017;
     }
     public static final class id {
         public static final int GridLayout1=0x7f08000c;
@@ -45,7 +56,6 @@ public final class R {
         public static final int contactgegevens=0x7f080008;
         public static final int contactgegevensText=0x7f080009;
         public static final int editText1=0x7f08000b;
-        public static final int editText2=0x7f080012;
         public static final int imageView1=0x7f080002;
         public static final int overamnesty=0x7f08000a;
         public static final int overons=0x7f080001;
@@ -53,7 +63,11 @@ public final class R {
         public static final int steunOnsView=0x7f08000d;
         public static final int steunons=0x7f080005;
         public static final int textView1=0x7f080000;
-        public static final int textView2=0x7f080011;
+        public static final int textView2=0x7f080012;
+        public static final int textView3=0x7f080015;
+        public static final int textView4=0x7f080014;
+        public static final int textView5=0x7f080011;
+        public static final int thema1=0x7f080013;
         public static final int themas=0x7f080004;
     }
     public static final class layout {

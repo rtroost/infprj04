@@ -32,10 +32,8 @@ public class Acties extends ListActivity {
 		 str[i] = returnList.get(i).getTitle();
 		 }
 
-//		String[] str = new String[] { "Blub", "Blaat" };
-
 		setListAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, str));
+				R.layout.listviewlayout, str));
 	}
 
 	private ArrayList<Article> parseActieXml() {

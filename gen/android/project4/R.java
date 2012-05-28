@@ -63,13 +63,13 @@ public final class R {
         public static final int imageView1=0x7f090006;
         public static final int map_view=0x7f090005;
         public static final int overamnesty=0x7f09000e;
-        public static final int overons=0x7f090001;
+        public static final int overons=0x7f090000;
         public static final int search=0x7f090002;
         public static final int searchbutton=0x7f090011;
         public static final int searchfield=0x7f090010;
         public static final int steunOnsView=0x7f090013;
         public static final int steunons=0x7f090008;
-        public static final int textView1=0x7f090000;
+        public static final int textView1=0x7f090001;
         public static final int textView2=0x7f090018;
         public static final int textView3=0x7f09001b;
         public static final int textView4=0x7f09001a;
@@ -82,11 +82,12 @@ public final class R {
         public static final int agenda=0x7f030001;
         public static final int agendamap=0x7f030002;
         public static final int introlayout=0x7f030003;
-        public static final int main=0x7f030004;
-        public static final int overons=0x7f030005;
-        public static final int search=0x7f030006;
-        public static final int steunons=0x7f030007;
-        public static final int themas=0x7f030008;
+        public static final int listviewlayout=0x7f030004;
+        public static final int main=0x7f030005;
+        public static final int overons=0x7f030006;
+        public static final int search=0x7f030007;
+        public static final int steunons=0x7f030008;
+        public static final int themas=0x7f030009;
     }
     public static final class raw {
         public static final int acties=0x7f050000;

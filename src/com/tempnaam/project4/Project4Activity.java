@@ -40,8 +40,8 @@ public class Project4Activity extends Activity {
         Button closeButton = (Button)this.findViewById(R.id.search);
         closeButton.setOnClickListener(new OnClickListener() {
           public void onClick(View view) {
-        	System.out.println("hallo");
-            finish(); //finish sluit de app;
+        	Intent search = new Intent(Project4Activity.this, Search.class);
+       	    startActivity(search);
           }
         });
         
@@ -97,6 +97,14 @@ public class Project4Activity extends Activity {
         steunonsButton.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
         	   Intent i = new Intent(Project4Activity.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button agendaButton = (Button) findViewById(R.id.agenda);
+        agendaButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Project4Activity.this, Agenda.class);
         	   startActivity(i);
            }
         });

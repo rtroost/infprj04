@@ -39,6 +39,25 @@
             android:name="com.tempnaam.project4.Acties"
             android:label="@string/app_name" >
         </activity>
+      	<activity
+            android:name="com.tempnaam.project4.Agenda"
+            android:label="@string/app_name" >
+      	</activity>
+      	<activity android:name="com.tempnaam.project4.Agendamap"
+	                  android:label="@string/app_name">
+	            <intent-filter>
+	                <action android:name="android.intent.action.MAIN" />
+	                <category android:name="android.intent.category.LAUNCHER" />
+	            </intent-filter>
+        </activity>
+	         
+	    <uses-library android:name="com.google.android.maps" />
+
+	    <activity
+            android:name="com.tempnaam.project4.Search"
+            android:label="@string/app_name" >
+      	</activity>
+	    
     </application>
 
 </manifest>

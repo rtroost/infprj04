@@ -25,23 +25,25 @@ public class Acties extends ListActivity {
 		setContentView(R.layout.acties_layout);
 		
 		ArrayList<Article> returnList = parseActieXml();
-
-//		System.out.println(returnList.get(0).getTitle());
-//		
+//System.out.println(returnList.size());
+		
+		//System.out.println(returnList.get(0).getTitle());
+		
 //		String[] str = new String[returnList.size()];
 //				
 //		for(int i = 0; i < returnList.size(); i++) {
 //			str[i] = returnList.get(i).getTitle();
 //		}
 		
-		String[] str = new String[] { "Blub", "Blaat" };
+		//String[] str = new String[] { "Blub", "Blaat" };
 		
-		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, str));
+		//setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, str));
 	}
 
 	private ArrayList<Article> parseActieXml() {
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		try {
+			System.out.println("parse start");
 			SAXParser parser = factory.newSAXParser();
 			XmlParser_Acties handler = new XmlParser_Acties();
 			parser.parse(this.getResources().openRawResource(R.xml.acties), handler);
@@ -54,7 +56,7 @@ public class Acties extends ListActivity {
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
 		}
-		return null;		
+		return null;
 	}
 
 	class XmlParser_Acties extends DefaultHandler {
@@ -63,6 +65,7 @@ public class Acties extends ListActivity {
 		private StringBuilder builder;
 
 		public ArrayList<Article> getArticles() {
+			System.out.println("haalt list op");
 			return this.articles;
 		}
 
@@ -76,6 +79,7 @@ public class Acties extends ListActivity {
 		@Override
 		public void endElement(String uri, String localName, String qName)
 				throws SAXException {
+			System.out.println("endElement! : ");
 			super.endElement(uri, localName, qName);
 			
 			System.out.println("endElement! : " + qName);
@@ -116,6 +120,7 @@ public class Acties extends ListActivity {
 		@Override
 		public void startElement(String uri, String localName, String qName,
 				Attributes attributes) throws SAXException {
+			System.out.println("startElement!");
 			super.startElement(uri, localName, qName, attributes);
 
 			System.out.println("startElement!");

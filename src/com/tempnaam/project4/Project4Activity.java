@@ -52,6 +52,15 @@ public class Project4Activity extends Activity {
         	   startActivity(overons_i);
            }
         });
+        
+        Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent button3_i = new Intent(Project4Activity.this, Acties.class);
+        	   startActivity(button3_i);
+           }
+        });
+        
         /*
          * End Header bar
          */

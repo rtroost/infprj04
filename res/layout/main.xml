@@ -26,8 +26,7 @@
         <ImageView
             android:id="@+id/imageView1"
             android:layout_gravity="left"
-            android:src="@drawable/logo" />
-
+            android:src="@drawable/logo" />
         <TextView
             android:id="@+id/textView1"
             android:layout_width="251dp"

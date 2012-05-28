@@ -1,86 +1,182 @@
-//package com.tempnaam.project4;
-//
-//import android.app.Activity;
-//import android.os.Bundle;
-//import android.project4.R;
-//
-//import java.io.File;
-//import java.io.IOException;
-//import java.io.InputStream;
-//import java.net.URL;
-//
-//import javax.xml.parsers.DocumentBuilder;
-//import javax.xml.parsers.DocumentBuilderFactory;
-//import org.w3c.dom.Document;
-//import org.w3c.dom.Element;
-//import org.w3c.dom.Node;
-//import org.w3c.dom.NodeList;
-//import org.w3c.tidy.Tidy;
-//
-//public class Acties extends Activity {
-//
-//	/** Called when the activity is first created. */
-//	@Override
-//	public void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//		setContentView(R.layout.acties_layout);
-//
-//		// Parse XML Content
-//		this.parseActieXml();
-//	}
-//
-//	private void parseActieXml() {
-//		URL u = null;
-//		InputStream is = null;
-//		try {
-//			u = new URL("http://www.google.nl/");
-//			is = u.openStream();
-//		} catch (IOException e) {
-//			e.printStackTrace();
+package com.tempnaam.project4;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.project4.R;
+import android.widget.ArrayAdapter;
+
+public class Acties extends ListActivity {
+
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.acties_layout);
+		
+		ArrayList<Article> returnList = parseActieXml();
+
+//		System.out.println(returnList.get(0).getTitle());
+//		
+//		String[] str = new String[returnList.size()];
+//				
+//		for(int i = 0; i < returnList.size(); i++) {
+//			str[i] = returnList.get(i).getTitle();
 //		}
-//
-//		Tidy tidy = new Tidy();
-//		Document tidyDOM = tidy.parseDOM(is, null);
-//		NodeList divTags = tidyDOM.getElementsByTagName("div");
-//		System.out.println(divTags);
-//
-////		try {
-////			File file = new File("c:\\MyXMLFile.xml");
-////			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-////			DocumentBuilder db = dbf.newDocumentBuilder();
-////			Document doc = db.parse(file);
-////			doc.getDocumentElement().normalize();
-////			System.out.println("Root element "
-////					+ doc.getDocumentElement().getNodeName());
-////			NodeList nodeLst = doc.getElementsByTagName("employee");
-////			System.out.println("Information of all employees");
-////
-////			for (int s = 0; s < nodeLst.getLength(); s++) {
-////
-////				Node fstNode = nodeLst.item(s);
-////
-////				if (fstNode.getNodeType() == Node.ELEMENT_NODE) {
-////
-////					Element fstElmnt = (Element) fstNode;
-////					NodeList fstNmElmntLst = fstElmnt
-////							.getElementsByTagName("firstname");
-////					Element fstNmElmnt = (Element) fstNmElmntLst.item(0);
-////					NodeList fstNm = fstNmElmnt.getChildNodes();
-////					System.out.println("First Name : "
-////							+ ((Node) fstNm.item(0)).getNodeValue());
-////					NodeList lstNmElmntLst = fstElmnt
-////							.getElementsByTagName("lastname");
-////					Element lstNmElmnt = (Element) lstNmElmntLst.item(0);
-////					NodeList lstNm = lstNmElmnt.getChildNodes();
-////					System.out.println("Last Name : "
-////							+ ((Node) lstNm.item(0)).getNodeValue());
-////				}
-////
-////			}
-////		} catch (Exception e) {
-////			e.printStackTrace();
-////		}
-//
-//	}
-//
-//}
+		
+		String[] str = new String[] { "Blub", "Blaat" };
+		
+		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, str));
+	}
+
+	private ArrayList<Article> parseActieXml() {
+		SAXParserFactory factory = SAXParserFactory.newInstance();
+		try {
+			SAXParser parser = factory.newSAXParser();
+			XmlParser_Acties handler = new XmlParser_Acties();
+			parser.parse(this.getResources().openRawResource(R.xml.acties), handler);
+
+			return handler.getArticles();
+		} catch (SAXException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+		}
+		return null;		
+	}
+
+	class XmlParser_Acties extends DefaultHandler {
+		private ArrayList<Article> articles;
+		private Article currentArticle;
+		private StringBuilder builder;
+
+		public ArrayList<Article> getArticles() {
+			return this.articles;
+		}
+
+		@Override
+		public void characters(char[] ch, int start, int length)
+				throws SAXException {
+			super.characters(ch, start, length);
+			builder.append(ch, start, length);
+		}
+
+		@Override
+		public void endElement(String uri, String localName, String qName)
+				throws SAXException {
+			super.endElement(uri, localName, qName);
+			
+			System.out.println("endElement! : " + qName);
+
+			if (this.currentArticle != null) {
+				if (qName.equalsIgnoreCase("title")) {
+					currentArticle.setTitle(builder.toString());
+				} else if (qName.equalsIgnoreCase("description")) {
+					currentArticle.setDescription(builder.toString());
+				} else if (qName.equalsIgnoreCase("startdate")) {
+					currentArticle.setStartdate(builder.toString());
+				} else if (qName.equalsIgnoreCase("enddate")) {
+					currentArticle.setEnddate(builder.toString());
+				} else if (qName.equalsIgnoreCase("url")) {
+					currentArticle.setUrl(builder.toString());
+				} else if (qName.equalsIgnoreCase("geopoint")) {
+					currentArticle.setGeopoint(builder.toString());
+				} else if (qName.equalsIgnoreCase("article")) {
+					articles.add(currentArticle);
+				}
+				builder.setLength(0);
+			}
+		}
+
+		@Override
+		public void startDocument() throws SAXException {
+			System.out.println("dafuq");
+			super.startDocument();
+			System.out.println("woot");
+			
+			System.out.println("1");
+			articles = new ArrayList<Article>();
+			System.out.println("2");
+			builder = new StringBuilder();
+			System.out.println("3");
+		}
+
+		@Override
+		public void startElement(String uri, String localName, String qName,
+				Attributes attributes) throws SAXException {
+			super.startElement(uri, localName, qName, attributes);
+
+			System.out.println("startElement!");
+			
+			if (qName.equalsIgnoreCase("article")) {
+				this.currentArticle = new Article();
+			}
+		}
+	}
+
+	class Article {
+		private String title, description, startdate, enddate, url, geopoint;
+
+		public String getTitle() {
+			return title;
+		}
+
+		public void setTitle(String title) {
+			this.title = title;
+		}
+
+		public String getDescription() {
+			return description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public String getStartdate() {
+			return startdate;
+		}
+
+		public void setStartdate(String startdate) {
+			this.startdate = startdate;
+		}
+
+		public String getEnddate() {
+			return enddate;
+		}
+
+		public void setEnddate(String enddate) {
+			this.enddate = enddate;
+		}
+
+		public String getUrl() {
+			return url;
+		}
+
+		public void setUrl(String url) {
+			this.url = url;
+		}
+
+		public String getGeopoint() {
+			return geopoint;
+		}
+
+		public void setGeopoint(String geopoint) {
+			this.geopoint = geopoint;
+		}
+
+	}
+
+}

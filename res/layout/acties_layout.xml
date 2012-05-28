@@ -7,8 +7,16 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Acties"
+        android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_horizontal"/>
+    
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </ListView>
 
 </LinearLayout>

@@ -1,9 +1,7 @@
 package com.tempnaam.project4;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
@@ -23,40 +21,38 @@ public class Acties extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.acties_layout);
-		
+
 		ArrayList<Article> returnList = parseActieXml();
-//System.out.println(returnList.size());
+
+		 System.out.println(returnList.get(0).getTitle());
 		
-		//System.out.println(returnList.get(0).getTitle());
+		 String[] str = new String[returnList.size()];
 		
-//		String[] str = new String[returnList.size()];
-//				
-//		for(int i = 0; i < returnList.size(); i++) {
-//			str[i] = returnList.get(i).getTitle();
-//		}
-		
-		//String[] str = new String[] { "Blub", "Blaat" };
-		
-		//setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, str));
+		 for(int i = 0; i < returnList.size(); i++) {
+		 str[i] = returnList.get(i).getTitle();
+		 }
+
+//		String[] str = new String[] { "Blub", "Blaat" };
+
+		setListAdapter(new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, str));
 	}
 
 	private ArrayList<Article> parseActieXml() {
-		SAXParserFactory factory = SAXParserFactory.newInstance();
 		try {
-			System.out.println("parse start");
-			SAXParser parser = factory.newSAXParser();
-			XmlParser_Acties handler = new XmlParser_Acties();
-			parser.parse(this.getResources().openRawResource(R.xml.acties), handler);
+			/** Handling XML */
+            SAXParserFactory spf = SAXParserFactory.newInstance();
+            SAXParser sp = spf.newSAXParser();
+            
+            XmlParser_Acties handler = new XmlParser_Acties();
+            
+            sp.parse(getResources().openRawResource(R.raw.acties), handler);
 
 			return handler.getArticles();
-		} catch (SAXException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
-		}
-		return null;
+		} catch(Exception e) {
+            System.out.println("XML Error " + e);
+        }
+		return null;		
 	}
 
 	class XmlParser_Acties extends DefaultHandler {
@@ -65,38 +61,50 @@ public class Acties extends ListActivity {
 		private StringBuilder builder;
 
 		public ArrayList<Article> getArticles() {
-			System.out.println("haalt list op");
 			return this.articles;
 		}
-
+		
 		@Override
 		public void characters(char[] ch, int start, int length)
 				throws SAXException {
 			super.characters(ch, start, length);
 			builder.append(ch, start, length);
 		}
+		
+		public String trimSubstring(StringBuilder sb) {
+		    int first, last;
+
+		    for (first=0; first<sb.length(); first++)
+		        if (!Character.isWhitespace(sb.charAt(first)))
+		            break;
+
+		    for (last=sb.length(); last>first; last--)
+		        if (!Character.isWhitespace(sb.charAt(last-1)))
+		            break;
+
+		    return sb.substring(first, last);
+		}
 
 		@Override
 		public void endElement(String uri, String localName, String qName)
 				throws SAXException {
-			System.out.println("endElement! : ");
 			super.endElement(uri, localName, qName);
-			
+
 			System.out.println("endElement! : " + qName);
 
 			if (this.currentArticle != null) {
 				if (qName.equalsIgnoreCase("title")) {
-					currentArticle.setTitle(builder.toString());
+					currentArticle.setTitle(trimSubstring(builder));
 				} else if (qName.equalsIgnoreCase("description")) {
-					currentArticle.setDescription(builder.toString());
+					currentArticle.setDescription(trimSubstring(builder));
 				} else if (qName.equalsIgnoreCase("startdate")) {
-					currentArticle.setStartdate(builder.toString());
+					currentArticle.setStartdate(trimSubstring(builder));
 				} else if (qName.equalsIgnoreCase("enddate")) {
-					currentArticle.setEnddate(builder.toString());
+					currentArticle.setEnddate(trimSubstring(builder));
 				} else if (qName.equalsIgnoreCase("url")) {
-					currentArticle.setUrl(builder.toString());
+					currentArticle.setUrl(trimSubstring(builder));
 				} else if (qName.equalsIgnoreCase("geopoint")) {
-					currentArticle.setGeopoint(builder.toString());
+					currentArticle.setGeopoint(trimSubstring(builder));
 				} else if (qName.equalsIgnoreCase("article")) {
 					articles.add(currentArticle);
 				}
@@ -106,25 +114,19 @@ public class Acties extends ListActivity {
 
 		@Override
 		public void startDocument() throws SAXException {
-			System.out.println("dafuq");
 			super.startDocument();
-			System.out.println("woot");
-			
-			System.out.println("1");
+
 			articles = new ArrayList<Article>();
-			System.out.println("2");
 			builder = new StringBuilder();
-			System.out.println("3");
 		}
 
 		@Override
 		public void startElement(String uri, String localName, String qName,
 				Attributes attributes) throws SAXException {
-			System.out.println("startElement!");
 			super.startElement(uri, localName, qName, attributes);
 
 			System.out.println("startElement!");
-			
+
 			if (qName.equalsIgnoreCase("article")) {
 				this.currentArticle = new Article();
 			}

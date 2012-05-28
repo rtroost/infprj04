@@ -9,14 +9,18 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="Acties"
-        android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_horizontal"/>
-    
-    <ListView
-        android:id="@+id/android:list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#FFFFFF"
+        android:dividerHeight="1dip"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="false" >
     </ListView>
 
-</LinearLayout>
+</LinearLayout>

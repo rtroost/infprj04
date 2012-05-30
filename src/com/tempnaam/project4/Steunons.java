@@ -41,22 +41,14 @@ public class Steunons extends Activity {
          */
         
         
-        Button doneren = (Button) findViewById(R.id.buttonDoneren);
-        doneren.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent i = new Intent(Steunons.this, Steunons.class);
-        	   i.setData(Uri.parse("http://www.anddev.org"));
-        	   startActivity(i);
-           }
-        });
+      
         
         
-        Button wordtLid = (Button) findViewById(R.id.buttonWordLid);
-        wordtLid.setOnClickListener(new View.OnClickListener() {
+        Button doneerWordtLid = (Button) findViewById(R.id.buttonWordLid);
+        doneerWordtLid.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
-        	   Intent i = new Intent(Steunons.this, Steunons.class);
-        	   i.setData(Uri.parse("http://www.anddev.org"));
-        	   startActivity(i);
+        	   Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/steun-amnesty/word-lid" ) );
+               startActivity( browse );
            }
         });
         
@@ -64,12 +56,13 @@ public class Steunons extends Activity {
         Button doneerEenmalig = (Button) findViewById(R.id.buttonEenmaligDoneren);
         doneerEenmalig.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
-        	   Intent i = new Intent(Steunons.this, Steunons.class);
-        	   i.setData(Uri.parse("http://www.anddev.org"));
-        	   startActivity(i);
+        	   Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/steun-amnesty/geef/eenmalige-gift" ) );
+               startActivity( browse );
            }
         });
        
+        
     }
-
+	
+	
 }

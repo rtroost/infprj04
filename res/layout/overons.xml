@@ -28,20 +28,18 @@
 	            android:layout_row="0"
 	            android:layout_rowSpan="2"
 	            android:background="@drawable/about" />
-	
+	
 	        <TextView
 	            android:id="@+id/textView1"
-	            android:layout_width="248dp"
+	            android:layout_width="252dp"
 	            android:layout_height="match_parent"
 	            android:layout_column="1"
-	            android:layout_gravity="fill_vertical"
 	            android:layout_row="0"
 	            android:layout_rowSpan="2"
 	            android:gravity="fill_vertical|center_vertical|center_horizontal"
 	            android:text="Over Amnesty"
 	            android:textAppearance="?android:attr/textAppearanceMedium"
 	            android:textColor="@color/black" />
-	
 	
 	        <Button
 	            android:id="@+id/search"
@@ -89,7 +87,7 @@
 		        android:textSize="15dp" 
 		        android:paddingLeft="20dp"
 		        android:paddingRight="20dp" 
-		        android:paddingBottom="10dp"/>
+		        android:paddingBottom="10dp" android:textIsSelectable="true"/>
 		
 		    <TextView
 		        android:id="@+id/overamnesty"

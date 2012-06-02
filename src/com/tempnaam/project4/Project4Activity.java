@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.StrictMode;
 import android.project4.R;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +32,13 @@ public class Project4Activity extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	
+    	if (android.os.Build.VERSION.SDK_INT > 9) {
+    	      StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+    	      StrictMode.setThreadPolicy(policy);
+    	    }
+
+    	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
@@ -105,6 +113,14 @@ public class Project4Activity extends Activity {
         agendaButton.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
         	   Intent i = new Intent(Project4Activity.this, Agenda.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button socialmediaButton = (Button) findViewById(R.id.socialmedia);
+        socialmediaButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Project4Activity.this, Socialmedia.class);
         	   startActivity(i);
            }
         });

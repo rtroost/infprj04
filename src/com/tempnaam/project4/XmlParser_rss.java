@@ -6,13 +6,13 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class XmlParser_acties extends DefaultHandler {
-	private ArrayList<Article> articles;
-	private Article currentArticle;
+public class XmlParser_rss extends DefaultHandler {
+	private ArrayList<Item> items;
+	private Item currentItem;
 	private StringBuilder builder;
 
-	public ArrayList<Article> getArticles() {
-		return this.articles;
+	public ArrayList<Item> getItems() {
+		return this.items;
 	}
 	
 	@Override
@@ -42,22 +42,21 @@ public class XmlParser_acties extends DefaultHandler {
 		super.endElement(uri, localName, qName);
 
 		System.out.println("endElement! : " + qName);
-
-		if (this.currentArticle != null) {
+		//<item
+		//<title>
+		// <description>
+		// <pubDate>
+		if (this.currentItem != null) {
 			if (qName.equalsIgnoreCase("title")) {
-				currentArticle.setTitle(trimSubstring(builder));
+				currentItem.setTitle(trimSubstring(builder));
 			} else if (qName.equalsIgnoreCase("description")) {
-				currentArticle.setDescription(trimSubstring(builder));
-			} else if (qName.equalsIgnoreCase("startdate")) {
-				currentArticle.setStartdate(trimSubstring(builder));
-			} else if (qName.equalsIgnoreCase("enddate")) {
-				currentArticle.setEnddate(trimSubstring(builder));
-			} else if (qName.equalsIgnoreCase("url")) {
-				currentArticle.setUrl(trimSubstring(builder));
-			} else if (qName.equalsIgnoreCase("geopoint")) {
-				currentArticle.setGeopoint(trimSubstring(builder));
-			} else if (qName.equalsIgnoreCase("article")) {
-				articles.add(currentArticle);
+				currentItem.setDescription(trimSubstring(builder));
+			} else if (qName.equalsIgnoreCase("link")) {
+				currentItem.setLink(trimSubstring(builder));
+			} else if (qName.equalsIgnoreCase("pubDate")) {
+				currentItem.setPubDate(trimSubstring(builder));
+			} else if (qName.equalsIgnoreCase("item")) {
+				items.add(currentItem);
 			}
 			builder.setLength(0);
 		}
@@ -67,7 +66,7 @@ public class XmlParser_acties extends DefaultHandler {
 	public void startDocument() throws SAXException {
 		super.startDocument();
 
-		articles = new ArrayList<Article>();
+		items = new ArrayList<Item>();
 		builder = new StringBuilder();
 	}
 
@@ -78,14 +77,14 @@ public class XmlParser_acties extends DefaultHandler {
 
 		System.out.println("startElement!");
 
-		if (qName.equalsIgnoreCase("article")) {
-			this.currentArticle = new Article();
+		if (qName.equalsIgnoreCase("item")) {
+			this.currentItem = new Item();
 		}
 	}
 }
 
-class Article {
-	private String title, description, startdate, enddate, url, geopoint;
+class Item {
+	private String title, description, link, pubDate;
 
 	public String getTitle() {
 		return title;
@@ -103,36 +102,20 @@ class Article {
 		this.description = description;
 	}
 
-	public String getStartdate() {
-		return startdate;
+	public String getLink() {
+		return link;
 	}
 
-	public void setStartdate(String startdate) {
-		this.startdate = startdate;
+	public void setLink(String link) {
+		this.link = link;
 	}
 
-	public String getEnddate() {
-		return enddate;
+	public String getPubDate() {
+		return pubDate;
 	}
 
-	public void setEnddate(String enddate) {
-		this.enddate = enddate;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public String getGeopoint() {
-		return geopoint;
-	}
-
-	public void setGeopoint(String geopoint) {
-		this.geopoint = geopoint;
+	public void setPubDate(String pubDate) {
+		this.pubDate = pubDate;
 	}
 
 }

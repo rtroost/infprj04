@@ -65,15 +65,20 @@
         <activity
             android:name="com.tempnaam.project4.Search"
             android:label="@string/app_name" >
-        </activity>
+      	</activity>
+      	<activity
+            android:name="com.tempnaam.project4.Socialmedia"
+            android:label="@string/app_name" >
+      	</activity>
+      	
+	    <uses-permission
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:name="android.permission.INTERNET">
+	    </uses-permission>
+	    <uses-permission
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:name="android.permission.ACCESS_FINE_LOCATION">
+	    </uses-permission>
 
-        <uses-permission
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:name="android.permission.INTERNET" >
-        </uses-permission>
-        <uses-permission
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:name="android.permission.ACCESS_FINE_LOCATION" >
-        </uses-permission>
     </application>
 </manifest>

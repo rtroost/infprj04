@@ -49,27 +49,32 @@ public final class R {
         public static final int thema9=0x7f020018;
     }
     public static final class id {
-        public static final int GridLayout1=0x7f08001b;
+        public static final int GridLayout1=0x7f080021;
         public static final int ImageSlider=0x7f080013;
         public static final int TextView04=0x7f080009;
         public static final int agenda=0x7f080012;
         public static final int agendamap=0x7f08000d;
         public static final int button3=0x7f080014;
-        public static final int buttonEenmaligDoneren=0x7f08001e;
-        public static final int buttonWordLid=0x7f08001d;
-        public static final int contactgegevens=0x7f080015;
-        public static final int contactgegevensText=0x7f080016;
-        public static final int editText1=0x7f080018;
+        public static final int buttonEenmaligDoneren=0x7f080024;
+        public static final int buttonWordLid=0x7f080023;
+        public static final int contactgegevens=0x7f080016;
+        public static final int contactgegevensText=0x7f080017;
+        public static final int editText1=0x7f080019;
+        public static final int facebook=0x7f08001d;
         public static final int imageView1=0x7f08000f;
         public static final int listView_Acties=0x7f080001;
         public static final int map_view=0x7f08000e;
-        public static final int overamnesty=0x7f080017;
+        public static final int my_tabhost=0x7f08001c;
+        public static final int overamnesty=0x7f080018;
         public static final int overons=0x7f080002;
+        public static final int rss=0x7f08001f;
+        public static final int rssll=0x7f080020;
         public static final int search=0x7f080004;
-        public static final int searchbutton=0x7f08001a;
-        public static final int searchfield=0x7f080019;
-        public static final int space1=0x7f08001f;
-        public static final int steunOnsView=0x7f08001c;
+        public static final int searchbutton=0x7f08001b;
+        public static final int searchfield=0x7f08001a;
+        public static final int socialmedia=0x7f080015;
+        public static final int space1=0x7f080025;
+        public static final int steunOnsView=0x7f080022;
         public static final int steunons=0x7f080011;
         public static final int tableRow1=0x7f080008;
         public static final int tableRow2=0x7f08000a;
@@ -77,31 +82,35 @@ public final class R {
         public static final int tableRow4=0x7f08000c;
         public static final int textView1=0x7f080003;
         public static final int textView2=0x7f080006;
-        public static final int textView3=0x7f080022;
+        public static final int textView3=0x7f080028;
         public static final int textView4=0x7f080007;
-        public static final int textView5=0x7f080020;
-        public static final int thema1=0x7f080021;
+        public static final int textView5=0x7f080026;
+        public static final int thema1=0x7f080027;
         public static final int themas=0x7f080010;
         public static final int topbutton=0x7f080005;
+        public static final int twitter=0x7f08001e;
         public static final int viewPager=0x7f080000;
     }
     public static final class layout {
         public static final int actiepager=0x7f030000;
         public static final int actiepager_listview=0x7f030001;
-        public static final int agenda=0x7f030002;
-        public static final int agendamap=0x7f030003;
-        public static final int introlayout=0x7f030004;
-        public static final int listviewlayout=0x7f030005;
-        public static final int main=0x7f030006;
-        public static final int overons=0x7f030007;
-        public static final int search=0x7f030008;
-        public static final int steunons=0x7f030009;
-        public static final int themas=0x7f03000a;
+        public static final int acties_layout=0x7f030002;
+        public static final int agenda=0x7f030003;
+        public static final int agendamap=0x7f030004;
+        public static final int introlayout=0x7f030005;
+        public static final int listviewlayout=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int overons=0x7f030008;
+        public static final int search=0x7f030009;
+        public static final int socialmedia=0x7f03000a;
+        public static final int steunons=0x7f03000b;
+        public static final int themas=0x7f03000c;
     }
     public static final class raw {
         public static final int petities=0x7f050000;
-        public static final int schrijfacties=0x7f050001;
-        public static final int specialeacties=0x7f050002;
+        public static final int rss=0x7f050001;
+        public static final int schrijfacties=0x7f050002;
+        public static final int specialeacties=0x7f050003;
     }
     public static final class string {
         public static final int app_name=0x7f060001;

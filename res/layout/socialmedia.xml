@@ -5,49 +5,65 @@
         android:layout_height="fill_parent"
         android:gravity="center|top"
         android:orientation="vertical" >
-
+
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="30dip"
+            android:layout_height="50dp"
             android:background="@color/amnastyyellow"
-            android:columnCount="3"
+            android:columnCount="6"
             android:rowCount="1" >
 
             <Button
-                android:id="@+id/overons"
-                android:layout_width="34dp"
+                android:id="@+id/homebutton"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:layout_gravity="bottom"
                 android:layout_row="0"
-                android:layout_rowSpan="2"
+                android:background="@drawable/home_button" />
+
+            <Button
+                android:id="@+id/overons"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_gravity="bottom"
+                android:layout_row="0"
                 android:background="@drawable/about" />
-	
-	        <TextView
-	            android:id="@+id/textView1"
-	            android:layout_width="248dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="1"
-	            android:layout_gravity="fill_vertical"
-	            android:layout_row="0"
-	            android:layout_rowSpan="2"
-	            android:gravity="fill_vertical|center_vertical|center_horizontal"
-	            android:text="Social Media"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@color/black" />
-	
-	
-	        <Button
-	            android:id="@+id/search"
-	            android:layout_width="34dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="2"
-	            android:layout_gravity="bottom|right"
-	            android:layout_row="0"
-	            android:layout_rowSpan="2"
-	            android:background="@drawable/search" />
-	
-	    </GridLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_columnSpan="3"
+                android:layout_gravity="bottom"
+                android:layout_row="0"
+                android:gravity="fill_vertical|center_vertical|center_horizontal"
+                android:text="Social Media"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:layout_row="0"
+                android:background="@drawable/search" android:layout_gravity="bottom|right"/>
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="1dp"
+                android:layout_column="0"
+                android:layout_row="0" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="1dp"
+                android:layout_column="2"
+                android:layout_row="0" />
+        </GridLayout>
 	    
 	    <GridLayout
 	        android:layout_width="match_parent"

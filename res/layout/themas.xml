@@ -4,64 +4,112 @@
   android:id="@+id/android:list"
   android:layout_width="fill_parent"
   android:layout_height="wrap_content" >
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
 	    android:gravity="center|top"
 	    android:orientation="vertical" >
-	
+
 	    <GridLayout
 	        android:layout_width="match_parent"
-	        android:layout_height="30dip"
-	        android:columnCount="3"
-	        android:rowCount="1"
-	        android:background="@color/amnastyyellow" >
-	
-	
+	        android:layout_height="50dp"
+	        android:background="@color/amnastyyellow"
+	        android:columnCount="4"
+	        android:rowCount="1" >
+
+	        <Button
+	            android:id="@+id/homebutton"
+	            android:layout_width="50dp"
+	            android:layout_height="fill_parent"
+	            android:layout_column="0"
+	            android:layout_gravity="bottom|left"
+	            android:layout_row="0"
+	            android:background="@drawable/home_button" />
+
 	        <Button
 	            android:id="@+id/overons"
-	            android:layout_width="34dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="0"
-	            android:layout_gravity="bottom"
-	            android:layout_row="0"
-	            android:layout_rowSpan="2"
-	            android:background="@drawable/about" />
-	
-	        <TextView
-	            android:id="@+id/textView1"
-	            android:layout_width="248dp"
+	            android:layout_width="50dp"
 	            android:layout_height="match_parent"
 	            android:layout_column="1"
-	            android:layout_gravity="fill_vertical"
+	            android:layout_gravity="bottom"
 	            android:layout_row="0"
-	            android:layout_rowSpan="2"
-	            android:gravity="fill_vertical|center_vertical|center_horizontal"
-	            android:text="Projecten en thema's"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@color/black" />
-	
-	
+	            android:background="@drawable/about" />
+
 	        <Button
 	            android:id="@+id/search"
-	            android:layout_width="34dp"
+	            android:layout_width="50dp"
 	            android:layout_height="match_parent"
-	            android:layout_column="2"
+	            android:layout_column="3"
 	            android:layout_gravity="bottom|right"
 	            android:layout_row="0"
-	            android:layout_rowSpan="2"
+	            android:layout_rowSpan="1"
 	            android:background="@drawable/search" />
-	
+
+	        <TextView
+	            android:id="@+id/textView1"
+	            android:layout_width="170dp"
+	            android:layout_height="match_parent"
+	            android:layout_column="2"
+	            android:layout_columnSpan="1"
+	            android:layout_gravity="bottom"
+	            android:layout_row="0"
+	            android:gravity="fill_vertical|center_vertical|center_horizontal"
+	            android:text="Projecten en thema&apos;s"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textColor="@color/black" />
+
+	        <Space
+	            android:layout_width="48dp"
+	            android:layout_height="1dp"
+	            android:layout_column="1"
+	            android:layout_row="0" />
 	    </GridLayout>
-	    
+
 	    <GridLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="2dip"
-	        android:columnCount="3"
-	        android:rowCount="1"
-	        android:background="@color/gray" >
+	        android:background="@color/gray"
+	        android:columnCount="2"
+	        android:rowCount="1" >
 	    </GridLayout>
-		    
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="33dp" >
+
+	        <Button
+	            android:id="@+id/themas"
+	            android:layout_width="104dp"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/button"
+	            android:text="Projecten" />
+
+	        <Button
+	            android:id="@+id/steunons"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.38"
+	            android:background="@drawable/button"
+	            android:text="Steun Ons" />
+
+	        <Button
+	            android:id="@+id/agenda"
+	            android:layout_width="102dp"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/button"
+	            android:text="Agenda" />
+	    </LinearLayout>
+
+	    <GridLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="2dip"
+	        android:background="@color/gray"
+	        android:columnCount="2"
+	        android:rowCount="1" >
+	    </GridLayout>
+
 	    <LinearLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
@@ -110,7 +158,7 @@
 	            android:layout_height="wrap_content"
 	            android:layout_marginBottom="4dp"
 	            android:onClick="thema1" >
-
+
 	            <TextView
 	                android:id="@+id/textView4"
 	                android:layout_width="207dp"
@@ -125,7 +173,6 @@
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:src="@drawable/thema1" />
-
 	        </LinearLayout>
 
 	        <GridLayout
@@ -569,6 +616,6 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
 	                android:src="@drawable/thema11" />
 	        </LinearLayout>
 	    </LinearLayout>
-
 	</LinearLayout>
+
 </ScrollView>	

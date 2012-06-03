@@ -33,9 +33,49 @@ public class Agenda extends Activity {
         	   startActivity(overons_i);
            }
         });
+        
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent home_i = new Intent(Agenda.this, Project4Activity.class);
+        	   startActivity(home_i);
+           }
+        });
+        
+        Button search = (Button) findViewById(R.id.search);
+        overons.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent search = new Intent(Agenda.this, Search.class);
+        	   startActivity(search);
+           }
+        });
         /*
          * End Header bar
          */
+        
+        Button themas = (Button) findViewById(R.id.themas);
+        themas.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Agenda.this, Themas.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button steunonsButton = (Button) findViewById(R.id.steunons);
+        steunonsButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Agenda.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button agenda1Button = (Button) findViewById(R.id.agenda);
+        agenda1Button.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Agenda.this, Agenda.class);
+        	   startActivity(i);
+           }
+        });
         
         Button agendaButton = (Button) findViewById(R.id.agendamap);
         agendaButton.setOnClickListener(new View.OnClickListener() {

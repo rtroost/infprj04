@@ -18,12 +18,20 @@ public class Overons extends Activity {
         /*
          * Header bar
          */
-        Button closeButton = (Button)this.findViewById(R.id.search);
-        closeButton.setOnClickListener(new OnClickListener() {
+        Button search = (Button)this.findViewById(R.id.search);
+        search.setOnClickListener(new OnClickListener() {
           public void onClick(View view) {
-        	System.out.println("hallo");
-            finish(); //finish sluit de app;
+           Intent search_i = new Intent(Overons.this, Search.class);
+       	   startActivity(search_i);
           }
+        });
+        
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent home_i = new Intent(Overons.this, Project4Activity.class);
+        	   startActivity(home_i);
+           }
         });
         
         Button overons = (Button) findViewById(R.id.overons);
@@ -36,6 +44,30 @@ public class Overons extends Activity {
         /*
          * End Header bar
          */
+        
+        Button themas = (Button) findViewById(R.id.themas);
+        themas.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Overons.this, Themas.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button steunonsButton = (Button) findViewById(R.id.steunons);
+        steunonsButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Overons.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button agendaButton = (Button) findViewById(R.id.agenda);
+        agendaButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Overons.this, Agenda.class);
+        	   startActivity(i);
+           }
+        });
        
     }
 

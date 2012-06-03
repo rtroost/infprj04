@@ -21,12 +21,13 @@ public class Themas extends Activity {
         /*
          * Header bar
          */
-        Button closeButton = (Button)this.findViewById(R.id.search);
-        closeButton.setOnClickListener(new OnClickListener() {
-          public void onClick(View view) {
-        	System.out.println("hallo");
-            finish(); //finish sluit de app;
-          }
+        
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent home_i = new Intent(Themas.this, Project4Activity.class);
+        	   startActivity(home_i);
+           }
         });
         
         Button overons = (Button) findViewById(R.id.overons);
@@ -36,13 +37,42 @@ public class Themas extends Activity {
         	   startActivity(overons_i);
            }
         });
+        
+        Button search = (Button) findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent search_i = new Intent(Themas.this, Search.class);
+        	   startActivity(search_i);
+           }
+        });
         /*
          * End Header bar
          */
-       
         
+        Button themas = (Button) findViewById(R.id.themas);
+        themas.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Themas.this, Themas.class);
+        	   startActivity(i);
+           }
+        });
         
+        Button steunonsButton = (Button) findViewById(R.id.steunons);
+        steunonsButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Themas.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
         
+        Button agendaButton = (Button) findViewById(R.id.agenda);
+        agendaButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Themas.this, Agenda.class);
+        	   startActivity(i);
+           }
+        });
+
 //        TextView thema1 = (TextView)this.findViewById(R.id.thema1);
 //        thema1.setOnClickListener(new OnClickListener() {
 //          public void onClick(View view) {
@@ -52,6 +82,7 @@ public class Themas extends Activity {
 //        });
 
     }
+	/*
 	
 	public void thema1(View view){
     	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/bedrijven-en-mensenrechten" ) );
@@ -97,5 +128,6 @@ public class Themas extends Activity {
     	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/vrouwen" ) );
         startActivity( browse );
     }
+    */
 	
 }

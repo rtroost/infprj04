@@ -45,12 +45,20 @@ public class Project4Activity extends Activity {
         /*
          * Header bar
          */
-        Button closeButton = (Button)this.findViewById(R.id.search);
-        closeButton.setOnClickListener(new OnClickListener() {
+        Button searchButton = (Button)this.findViewById(R.id.search);
+        searchButton.setOnClickListener(new OnClickListener() {
           public void onClick(View view) {
         	Intent search = new Intent(Project4Activity.this, Search.class);
        	    startActivity(search);
           }
+        });
+        
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent home_i = new Intent(Project4Activity.this, Project4Activity.class);
+        	   startActivity(home_i);
+           }
         });
         
         Button overons = (Button) findViewById(R.id.overons);

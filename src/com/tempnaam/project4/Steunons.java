@@ -27,6 +27,14 @@ public class Steunons extends Activity {
           }
         });
         
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent home_i = new Intent(Steunons.this, Project4Activity.class);
+        	   startActivity(home_i);
+           }
+        });
+        
         Button overons = (Button) findViewById(R.id.overons);
         overons.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
@@ -39,6 +47,30 @@ public class Steunons extends Activity {
         /*
          * End Header bar
          */
+        
+        Button themas = (Button) findViewById(R.id.themas);
+        themas.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Steunons.this, Themas.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button steunonsButton = (Button) findViewById(R.id.steunons);
+        steunonsButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Steunons.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button agendaButton = (Button) findViewById(R.id.agenda);
+        agendaButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Steunons.this, Agenda.class);
+        	   startActivity(i);
+           }
+        });
         
         
       

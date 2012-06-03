@@ -5,52 +5,102 @@
 	    android:layout_height="fill_parent"
 	    android:gravity="center|top"
 	    android:orientation="vertical" >
- 
-    
-    
+    
     <GridLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="30dip"
-	        android:columnCount="3"
-	        android:rowCount="1"
-	        android:background="@color/amnastyyellow" >
-	
-	
-	        <Button
-	            android:id="@+id/overons"
-	            android:layout_width="34dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="0"
-	            android:layout_gravity="bottom"
-	            android:layout_row="0"
-	            android:layout_rowSpan="2"
-	            android:background="@drawable/about" />
-	
-	        <TextView
-	            android:id="@+id/textView1"
-	            android:layout_width="248dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="1"
-	            android:layout_gravity="fill_vertical"
-	            android:layout_row="0"
-	            android:layout_rowSpan="2"
-	            android:gravity="fill_vertical|center_vertical|center_horizontal"
-	            android:text="Projecten en thema's"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@color/black" />
-	
-	
-	        <Button
-	            android:id="@+id/search"
-	            android:layout_width="34dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="2"
-	            android:layout_gravity="bottom|right"
-	            android:layout_row="0"
-	            android:layout_rowSpan="2"
-	            android:background="@drawable/search" />
-	
-	    </GridLayout>
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/amnastyyellow"
+        android:columnCount="4"
+        android:rowCount="1" >
+
+        <Button
+            android:id="@+id/homebutton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:background="@drawable/home_button" android:layout_gravity="bottom"/>
+
+        <Button
+            android:id="@+id/overons"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:background="@drawable/about" android:layout_columnSpan="1" android:layout_gravity="bottom"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_columnSpan="2"
+            android:layout_gravity="bottom"
+            android:layout_row="0"
+            android:gravity="fill_vertical|center_vertical|center_horizontal"
+            android:text="Projecten en thema&apos;s"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_column="3"
+            android:layout_gravity="bottom|right"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:background="@drawable/search" />
+
+        <Space
+            android:layout_width="51dp"
+            android:layout_height="1dp"
+            android:layout_column="1"
+            android:layout_row="0" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@color/gray"
+        android:columnCount="2"
+        android:rowCount="1" >
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="33dp" >
+
+        <Button
+            android:id="@+id/themas"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Projecten" />
+
+        <Button
+            android:id="@+id/steunons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.38"
+            android:background="@drawable/button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Steun Ons" />
+
+        <Button
+            android:id="@+id/agenda"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Agenda" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@color/gray"
+        android:columnCount="2"
+        android:rowCount="1" >
+    </GridLayout>
 	    
 	    <GridLayout
 	        android:layout_width="match_parent"

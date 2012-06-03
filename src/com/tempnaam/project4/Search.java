@@ -18,31 +18,58 @@ public class Search extends Activity {
         /*
          * Header bar
          */
-        Button closeButton = (Button)this.findViewById(R.id.search);
-        closeButton.setOnClickListener(new OnClickListener() {
-          public void onClick(View view) {
-        	System.out.println("hallo");
-            finish(); //finish sluit de app;
-          }
+
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent home_i = new Intent(Search.this, Project4Activity.class);
+        	   startActivity(home_i);
+           }
         });
         
         Button overons = (Button) findViewById(R.id.overons);
         overons.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
-        	   Intent overons_i = new Intent(Search.this, Search.class);
+        	   Intent overons_i = new Intent(Search.this, Overons.class);
         	   startActivity(overons_i);
            }
         });
-        /*
-         * End Header bar
-         */
+        
         
         Button search = (Button) findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {
-//        	   Intent overons_i = new Intent(Search.this, Search.class);
-//        	   startActivity(overons_i);
-        	   System.out.println("hallo");
+      	   Intent overons_i = new Intent(Search.this, Search.class);
+       	   startActivity(overons_i);
+
+           }
+        });
+        
+        /*
+         * End Header bar
+         */
+        
+        Button themas = (Button) findViewById(R.id.themas);
+        themas.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Search.this, Themas.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button steunonsButton = (Button) findViewById(R.id.steunons);
+        steunonsButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Search.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button agendaButton = (Button) findViewById(R.id.agenda);
+        agendaButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Search.this, Agenda.class);
+        	   startActivity(i);
            }
         });
         

@@ -7,47 +7,42 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="30dip"
+        android:layout_height="50dp"
         android:background="@color/amnastyyellow"
         android:columnCount="4"
         android:rowCount="1" >
 
         <Button
-            android:id="@+id/overons"
-            android:layout_width="34dp"
+            android:id="@+id/homebutton"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:layout_column="0"
-            android:layout_columnSpan="2"
-            android:layout_gravity="bottom"
-            android:layout_row="0"
-            android:layout_rowSpan="2"
-            android:background="@drawable/about" />
+            android:background="@drawable/home_button" android:layout_gravity="left"/>
 
-        <ImageView
-            android:id="@+id/imageView1"
+        <Button
+            android:id="@+id/overons"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:src="@drawable/logo" />
+            android:background="@drawable/about" />
+
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="251dp"
+            android:layout_width="170dp"
             android:layout_height="match_parent"
-            android:layout_column="2"
-            android:layout_gravity="fill_vertical"
+            android:layout_gravity="center"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:gravity="fill_vertical|center_vertical|center_horizontal"
             android:text="Amnesty International"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="16dp" />
 
         <Button
             android:id="@+id/search"
-            android:layout_width="34dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:layout_column="3"
-            android:layout_gravity="bottom|right"
-            android:layout_row="0"
-            android:layout_rowSpan="2"
+            android:layout_gravity="right"
             android:background="@drawable/search" />
 
         <Space
@@ -56,6 +51,7 @@
             android:layout_column="0"
             android:layout_gravity="fill_horizontal"
             android:layout_row="0" />
+
     </GridLayout>
 
     <GridLayout

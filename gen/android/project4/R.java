@@ -73,7 +73,6 @@ public final class R {
         public static final int searchbutton=0x7f08001b;
         public static final int searchfield=0x7f08001a;
         public static final int socialmedia=0x7f080015;
-        public static final int space1=0x7f080025;
         public static final int steunOnsView=0x7f080022;
         public static final int steunons=0x7f080011;
         public static final int tableRow1=0x7f080008;
@@ -82,10 +81,10 @@ public final class R {
         public static final int tableRow4=0x7f08000c;
         public static final int textView1=0x7f080003;
         public static final int textView2=0x7f080006;
-        public static final int textView3=0x7f080028;
+        public static final int textView3=0x7f080027;
         public static final int textView4=0x7f080007;
-        public static final int textView5=0x7f080026;
-        public static final int thema1=0x7f080027;
+        public static final int textView5=0x7f080025;
+        public static final int thema1=0x7f080026;
         public static final int themas=0x7f080010;
         public static final int topbutton=0x7f080005;
         public static final int twitter=0x7f08001e;

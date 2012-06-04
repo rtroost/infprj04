@@ -9,12 +9,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
-public class Actiepager extends FragmentActivity {
+import com.viewpagerindicator.TitlePageIndicator;
 
-	private PagerAdapter mPagerAdapter;
+public class Actiepager extends FragmentActivity {
+	MyPagerAdapter mAdapter;
+	ViewPager mPager;
+	TitlePageIndicator mIndicator;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,50 +33,45 @@ public class Actiepager extends FragmentActivity {
 	private void initialisePaging() {
 
 		List<Fragment> fragments = new Vector<Fragment>();
-		fragments.add(Fragment.instantiate(this, Actiepager_schrijfacties.class.getName()));
-		fragments.add(Fragment.instantiate(this, Actiepager_petities.class.getName()));
-		fragments.add(Fragment.instantiate(this, Actiepager_specialeacties.class.getName()));
-		this.mPagerAdapter = new MyPagerAdapter(
-				super.getSupportFragmentManager(), fragments);
-
-		ViewPager pager = (ViewPager) super.findViewById(R.id.viewPager);
-		pager.setAdapter(this.mPagerAdapter);
+		fragments.add(Fragment.instantiate(this,
+				Actiepager_schrijfacties.class.getName()));
+		fragments.add(Fragment.instantiate(this,
+				Actiepager_petities.class.getName()));
+		fragments.add(Fragment.instantiate(this,
+				Actiepager_specialeacties.class.getName()));
 		
-//		//Bind the title indicator to the adapter
-//		TitlePageIndicator titleIndicator = (TitlePageIndicator)findViewById(R.id.titles);
-//		titleIndicator.setViewPager(pager);
+		MyPagerAdapter mAdapter = new MyPagerAdapter(getSupportFragmentManager(),
+				fragments);
+
+		mPager = (ViewPager)findViewById(R.id.pager);
+        mPager.setAdapter(mAdapter);
+
+        mIndicator = (TitlePageIndicator)findViewById(R.id.titles);
+        mIndicator.setViewPager(mPager);
 	}
 
 	class MyPagerAdapter extends FragmentPagerAdapter {
 		private final List<Fragment> fragments;
+		protected final String[] CONTENT = new String[] { "Schrijfacties", "Petities", "Speciale Acties", };
 
-		/**
-		 * @param fm
-		 * @param fragments
-		 */
 		public MyPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
 			super(fm);
 			this.fragments = fragments;
 		}
+		
+	    @Override
+	    public Fragment getItem(int position) {
+	    	return this.fragments.get(position);
+	    }
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see android.support.v4.app.FragmentPagerAdapter#getItem(int)
-		 */
-		@Override
-		public Fragment getItem(int position) {
-			return this.fragments.get(position);
-		}
-
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see android.support.v4.view.PagerAdapter#getCount()
-		 */
-		@Override
-		public int getCount() {
-			return this.fragments.size();
-		}
+	    @Override
+	    public int getCount() {
+	        return this.fragments.size();
+	    }
+	    
+	    @Override
+	    public CharSequence getPageTitle(int position) {
+	        return this.CONTENT[position % CONTENT.length];
+	    }
 	}
 }

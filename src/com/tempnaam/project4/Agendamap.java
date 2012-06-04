@@ -3,10 +3,14 @@ package com.tempnaam.project4;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.project4.R;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
@@ -34,6 +38,61 @@ public class Agendamap extends MapActivity {
          
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agendamap);
+        
+        /*
+         * Header bar
+         */
+        Button search = (Button)this.findViewById(R.id.search);
+        search.setOnClickListener(new OnClickListener() {
+          public void onClick(View view) {
+           Intent search_i = new Intent(Agendamap.this, Search.class);
+       	   startActivity(search_i);
+          }
+        });
+        
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent home_i = new Intent(Agendamap.this, Project4Activity.class);
+        	   startActivity(home_i);
+           }
+        });
+        
+        Button overons = (Button) findViewById(R.id.overons);
+        overons.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent overons_i = new Intent(Agendamap.this, Overons.class);
+        	   startActivity(overons_i);
+           }
+        });
+        /*
+         * End Header bar
+         */
+        
+        Button themas = (Button) findViewById(R.id.themas);
+        themas.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Agendamap.this, Themas.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button steunonsButton = (Button) findViewById(R.id.steunons);
+        steunonsButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Agendamap.this, Steunons.class);
+        	   startActivity(i);
+           }
+        });
+        
+        Button agendaButton = (Button) findViewById(R.id.agenda);
+        agendaButton.setOnClickListener(new View.OnClickListener() {
+           public void onClick(View arg0) {
+        	   Intent i = new Intent(Agendamap.this, Agenda.class);
+        	   startActivity(i);
+           }
+        });
+        
          
         mapView = (MapView) findViewById(R.id.map_view);      
         mapView.setBuiltInZoomControls(true);

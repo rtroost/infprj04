@@ -199,29 +199,8 @@
         android:layout_width="24dp"
         android:layout_height="1dp"
         android:layout_column="2"
-        android:layout_gravity="fill_horizontal"
-<<<<<<< .mine
-        android:layout_row="0" />
-=======
-        android:layout_row="2" />
-    <!-- <android.support.v7.widget.Space android:layout_width="1dp" android:layout_height="10dp" android:layout_column="0" android:layout_row="4"/>
->>>>>>> .r36
+        android:layout_gravity="fill_horizontal"/>
 
-    <Space
-        android:layout_width="259dp"
-        android:layout_height="1dp"
-        android:layout_column="3"
-        android:layout_row="0" />
-
-    <Space
-        android:layout_width="1dp"
-        android:layout_height="90dp"
-        android:layout_column="0"
-<<<<<<< .mine
-        android:layout_row="3" />
-=======
-        android:layout_row="5" /> -->
->>>>>>> .r36
 
     <Space
         android:layout_width="1dp"
@@ -232,22 +211,8 @@
     <Space
         android:layout_width="1dp"
         android:layout_height="18dp"
-        android:layout_column="0"
-<<<<<<< .mine
-        android:layout_gravity="fill_horizontal"
-        android:layout_row="2" />
-=======
-        android:layout_row="7" />
+        android:layout_column="0"/>
 
-    <!-- <android.support.v7.widget.Space
-        android:id="@+id/space1"
-        android:layout_width="1dp"
-        android:layout_height="88dp"
-        android:layout_column="0"
-        android:layout_gravity="left"
-        android:layout_row="8" />
-    <android.support.v7.widget.Space android:layout_width="30dp" android:layout_height="1dp" android:layout_column="1" android:layout_row="0"/> -->
->>>>>>> .r36
 </GridLayout>
 
 </ScrollView>

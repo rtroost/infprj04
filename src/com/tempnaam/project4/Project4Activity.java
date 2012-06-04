@@ -3,18 +3,27 @@ package com.tempnaam.project4;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.project4.R;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class Project4Activity extends Activity {
 	
@@ -40,7 +49,74 @@ public class Project4Activity extends Activity {
 
     	
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        
+        
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        
+        View v = inflater.inflate(R.layout.main, null);
+        
+        LinearLayout menuitems = (LinearLayout) v.findViewById(R.id.menuitems);
+        
+        try{
+            ApplicationInfo info = getPackageManager().getApplicationInfo("com.tempname.project4", 0 );
+            
+            Button button = new Button(Project4Activity.this);
+            button.setText("Klik hier om de Amnesty Wallpaper app te openen.");
+            button.setTextSize(12);
+            button.setBackgroundResource(R.drawable.buttonview);
+            button.setOnClickListener(new OnClickListener(){
+            	public void onClick(View arg0) {
+            		
+            		Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage("com.tempname.project4");
+            		startActivity( LaunchIntent );
+
+                 }
+            });
+            
+            GridLayout.LayoutParams buttonpar = new GridLayout.LayoutParams();
+            buttonpar.width = -1;
+            buttonpar.height = 100;
+
+            menuitems.addView(button, buttonpar);
+            
+        } catch( PackageManager.NameNotFoundException e ){
+        	Button button = new Button(Project4Activity.this);
+            button.setText("Doneer en Download de Amnesty Wallpaper app.");
+            button.setTextSize(12);
+            button.setBackgroundResource(R.drawable.buttonview);
+            button.setOnClickListener(new OnClickListener(){
+            	public void onClick(View arg0) {
+            		
+            		Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store?hl=nl"));
+            		startActivity(browserIntent);
+
+                 }
+            });
+            
+            GridLayout.LayoutParams buttonpar = new GridLayout.LayoutParams();
+            buttonpar.width = -1;
+            buttonpar.height = 100;
+
+
+            menuitems.addView(button, buttonpar);
+        }
+        
+        
+        
+        
+		GridLayout line = new GridLayout(this);
+		line.setBackgroundResource(R.color.gray);
+		
+		GridLayout.LayoutParams first = new GridLayout.LayoutParams();
+		first.width = -1;
+		first.height = 2;
+		first.topMargin = 10;
+		first.bottomMargin = 10;
+
+		menuitems.addView(line, first);	
+        
+        setContentView(v);
+
         
         /*
          * Header bar

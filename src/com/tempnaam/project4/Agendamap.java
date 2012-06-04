@@ -3,6 +3,7 @@ package com.tempnaam.project4;
 import java.util.List;
 
 import android.app.Activity;
+import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.project4.R;
@@ -22,8 +23,11 @@ import com.google.android.maps.OverlayItem;
 public class Agendamap extends MapActivity {
 
 	private MapView mapView;
-	private static final int latitudeE6 = 37985339;
-	private static final int longitudeE6 = 23716735;
+	private static final Point[] punten = {new Point(51695624, 5297320)};
+	private static final String[] teksten = {"Film Justice for Sale - Den Bosch, Verkadefabriek"};
+	private static final int latitudeE6 = 52501176;
+	private static final int longitudeE6 = 4960327;
+	private static GeoPoint zoompoint = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,17 +43,28 @@ public class Agendamap extends MapActivity {
         CustomItemizedOverlay itemizedOverlay =
         new CustomItemizedOverlay(drawable, this);
         
-        GeoPoint point = new GeoPoint(latitudeE6, longitudeE6);
-        OverlayItem overlayitem =
-        new OverlayItem(point, "Hello", "I'm in Athens, Greece!");
+        for(int i = 0; i < punten.length; i++){
+        	
+        	GeoPoint point = new GeoPoint(punten[i].x, punten[i].y);
+            OverlayItem overlayitem =
+            new OverlayItem(point, "Amnesty Nederland", teksten[i]);
+            
+            itemizedOverlay.addOverlay(overlayitem);
+            mapOverlays.add(itemizedOverlay);
+            
+            if(i == 0){
+        		zoompoint = point;
+        	}
+        }
         
-        itemizedOverlay.addOverlay(overlayitem);
-        mapOverlays.add(itemizedOverlay);
+        
+        
+        
         
         MapController mapController = mapView.getController();
            
-        mapController.animateTo(point);
-        mapController.setZoom(6);
+        mapController.animateTo(zoompoint);
+        mapController.setZoom(9);
 
         
     }

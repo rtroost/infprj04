@@ -206,26 +206,26 @@
                 <TextView
                     android:id="@+id/TextView04"
                     android:padding="2dp"
-                    android:text="28 mei 2012"
+                    android:text="16 juni 2012"
                     android:textSize="12px" >
                 </TextView>
 
                 <TextView
                     android:id="@+id/TextView04"
                     android:padding="2dp"
-                    android:text="Bommenvangen op Achterhoekse Streekmarkt - Kaasboerderij Weenink, Lievelde"
+                    android:text="Film Justice for Sale - Den Bosch, Verkadefabriek"
                     android:textSize="12px" >
                 </TextView>
 
                 <TextView
                     android:id="@+id/TextView04"
                     android:padding="2dp"
-                    android:text="Noordoostpolder - Overijssel - Gelderland"
+                    android:text="Brabant - Limburg"
                     android:textSize="12px" >
                 </TextView>
             </TableRow>
 
-            <TableRow
+            <!-- <TableRow
                 android:id="@+id/tableRow3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
@@ -348,7 +348,7 @@
                     android:text="Brabant - Limburg"
                     android:textSize="12px" >
                 </TextView>
-            </TableRow>
+            </TableRow> -->
         </TableLayout>
 
         <Button

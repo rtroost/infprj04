@@ -179,17 +179,17 @@ public class Socialmedia extends Activity {
         TabHost tabs = (TabHost) this.findViewById(R.id.my_tabhost);
         tabs.setup();
         TabSpec tspec1 = tabs.newTabSpec("First Tab");
-        tspec1.setIndicator("One");
+        tspec1.setIndicator("Facebook");
         tspec1.setContent(R.id.facebook);
         tabs.addTab(tspec1);
         
         TabSpec tspec2 = tabs.newTabSpec("Second Tab");
-        tspec2.setIndicator("Two");
+        tspec2.setIndicator("Twitter");
         tspec2.setContent(R.id.twitter);
         tabs.addTab(tspec2);
         
         TabSpec tspec3 = tabs.newTabSpec("Third Tab");
-        tspec3.setIndicator("Three");
+        tspec3.setIndicator("Rss Feed");
         tspec3.setContent(R.id.rss);
         tabs.addTab(tspec3);
         

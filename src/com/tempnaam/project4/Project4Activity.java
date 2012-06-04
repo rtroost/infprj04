@@ -6,6 +6,7 @@ import java.util.TimerTask;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 
 import android.content.Context;
 import android.content.Intent;
@@ -39,10 +40,29 @@ public class Project4Activity extends SherlockActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add("Back").setIcon(android.R.drawable.ic_menu_revert)
+		menu.add("Back")
+				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+					@Override
+					public boolean onMenuItemClick(MenuItem item) {
+						Intent home_i = new Intent(Project4Activity.this,
+								Project4Activity.class);
+						startActivity(home_i);
+						return false;
+					}
+				}).setIcon(android.R.drawable.ic_menu_revert)
 				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		menu.add("Info")
-				.setIcon(android.R.drawable.ic_menu_info_details)
+				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+					@Override
+					public boolean onMenuItemClick(MenuItem item) {
+						Intent overons_i = new Intent(Project4Activity.this,
+								Overons.class);
+						startActivity(overons_i);
+						return false;
+					}
+				}).setIcon(android.R.drawable.ic_menu_info_details)
 				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		menu.add("Search")
 				.setIcon(android.R.drawable.ic_menu_search)
@@ -74,7 +94,7 @@ public class Project4Activity extends SherlockActivity {
 
 		try {
 			ApplicationInfo info = getPackageManager().getApplicationInfo(
-					"com.tempname.project4", 0);
+					"com.tempnaam.project4", 0);
 
 			Button button = new Button(Project4Activity.this);
 			button.setText("Klik hier om de Amnesty Wallpaper app te openen.");
@@ -131,35 +151,6 @@ public class Project4Activity extends SherlockActivity {
 
 		setContentView(v);
 
-		/*
-		 * Header bar
-		 */
-//		Button searchButton = (Button) this.findViewById(R.id.search);
-//		searchButton.setOnClickListener(new OnClickListener() {
-//			public void onClick(View view) {
-//				Intent search = new Intent(Project4Activity.this, Search.class);
-//				startActivity(search);
-//			}
-//		});
-//
-//		Button homebutton = (Button) findViewById(R.id.homebutton);
-//		homebutton.setOnClickListener(new View.OnClickListener() {
-//			public void onClick(View arg0) {
-//				Intent home_i = new Intent(Project4Activity.this,
-//						Project4Activity.class);
-//				startActivity(home_i);
-//			}
-//		});
-//
-//		Button overons = (Button) findViewById(R.id.overons);
-//		overons.setOnClickListener(new View.OnClickListener() {
-//			public void onClick(View arg0) {
-//				Intent overons_i = new Intent(Project4Activity.this,
-//						Overons.class);
-//				startActivity(overons_i);
-//			}
-//		});
-
 		Button button3 = (Button) findViewById(R.id.button3);
 		button3.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
@@ -168,10 +159,6 @@ public class Project4Activity extends SherlockActivity {
 				startActivity(button3_i);
 			}
 		});
-
-		/*
-		 * End Header bar
-		 */
 
 		// begin slider
 		final Handler mHandler = new Handler();

@@ -18,37 +18,6 @@ public class Themas extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.themas);
         
-        /*
-         * Header bar
-         */
-        
-        Button homebutton = (Button) findViewById(R.id.homebutton);
-        homebutton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent home_i = new Intent(Themas.this, Project4Activity.class);
-        	   startActivity(home_i);
-           }
-        });
-        
-        Button overons = (Button) findViewById(R.id.overons);
-        overons.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent overons_i = new Intent(Themas.this, Overons.class);
-        	   startActivity(overons_i);
-           }
-        });
-        
-        Button search = (Button) findViewById(R.id.search);
-        search.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent search_i = new Intent(Themas.this, Search.class);
-        	   startActivity(search_i);
-           }
-        });
-        /*
-         * End Header bar
-         */
-        
         Button themas = (Button) findViewById(R.id.themas);
         themas.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {

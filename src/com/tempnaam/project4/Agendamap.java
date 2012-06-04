@@ -38,37 +38,7 @@ public class Agendamap extends MapActivity {
          
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agendamap);
-        
-        /*
-         * Header bar
-         */
-        Button search = (Button)this.findViewById(R.id.search);
-        search.setOnClickListener(new OnClickListener() {
-          public void onClick(View view) {
-           Intent search_i = new Intent(Agendamap.this, Search.class);
-       	   startActivity(search_i);
-          }
-        });
-        
-        Button homebutton = (Button) findViewById(R.id.homebutton);
-        homebutton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent home_i = new Intent(Agendamap.this, Project4Activity.class);
-        	   startActivity(home_i);
-           }
-        });
-        
-        Button overons = (Button) findViewById(R.id.overons);
-        overons.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent overons_i = new Intent(Agendamap.this, Overons.class);
-        	   startActivity(overons_i);
-           }
-        });
-        /*
-         * End Header bar
-         */
-        
+               
         Button themas = (Button) findViewById(R.id.themas);
         themas.setOnClickListener(new View.OnClickListener() {
            public void onClick(View arg0) {

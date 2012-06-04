@@ -10,9 +10,9 @@
 
     <application
         android:debuggable="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/applogo_48x48_2"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        android:theme="@style/Theme.AmnestyStyled" >
         <activity
             android:name="com.tempnaam.project4.Intro"
             android:label="@string/app_name" >

@@ -3,8 +3,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center|top"
-    android:orientation="vertical" >
-
+    android:orientation="vertical">
+    
+    <!--  
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -24,7 +25,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="left"
             android:background="@drawable/about" />
-
         <TextView
             android:id="@+id/textView1"
             android:layout_width="170dp"
@@ -52,8 +52,8 @@
             android:layout_gravity="fill_horizontal"
             android:layout_row="0" />
 
-    </GridLayout>
-
+    </GridLayout> -->
+	
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="2dip"

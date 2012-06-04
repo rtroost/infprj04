@@ -1099,49 +1099,42 @@ containing a value of this type.
         public static final int abs__tab_selected_holo=0x7f020053;
         public static final int abs__tab_selected_pressed_holo=0x7f020054;
         public static final int abs__tab_unselected_pressed_holo=0x7f020055;
-        public static final int button=0x7f020056;
-        public static final int buttonview=0x7f020057;
-        public static final int foto1=0x7f020058;
-        public static final int foto2=0x7f020059;
-        public static final int foto3=0x7f02005a;
-        public static final int foto4=0x7f02005b;
-        public static final int home_button=0x7f02005c;
-        public static final int ic_compose=0x7f02005d;
-        public static final int ic_compose_inverse=0x7f02005e;
+        public static final int applogo_48x48=0x7f020056;
+        public static final int applogo_48x48_2=0x7f020057;
+        public static final int button=0x7f020058;
+        public static final int buttonview=0x7f020059;
+        public static final int foto1=0x7f02005a;
+        public static final int foto2=0x7f02005b;
+        public static final int foto3=0x7f02005c;
+        public static final int foto4=0x7f02005d;
+        public static final int home_button=0x7f02005e;
         public static final int ic_launcher=0x7f02005f;
-        public static final int ic_launcher_settings=0x7f020060;
-        public static final int ic_magnifying_glass=0x7f020061;
-        public static final int ic_refresh=0x7f020062;
-        public static final int ic_refresh_inverse=0x7f020063;
-        public static final int ic_search=0x7f020064;
-        public static final int ic_search_inverse=0x7f020065;
-        public static final int ic_title_share_default=0x7f020066;
-        public static final int intro=0x7f020067;
-        public static final int logo=0x7f020068;
-        public static final int options=0x7f020069;
-        public static final int options_2=0x7f02006a;
-        public static final int search=0x7f02006b;
-        public static final int search_2=0x7f02006c;
-        public static final int search_button=0x7f02006d;
-        public static final int thema1=0x7f02006e;
-        public static final int thema10=0x7f02006f;
-        public static final int thema11=0x7f020070;
-        public static final int thema2=0x7f020071;
-        public static final int thema3=0x7f020072;
-        public static final int thema4=0x7f020073;
-        public static final int thema5=0x7f020074;
-        public static final int thema6=0x7f020075;
-        public static final int thema7=0x7f020076;
-        public static final int thema8=0x7f020077;
-        public static final int thema9=0x7f020078;
-        public static final int vpi__tab_indicator=0x7f020079;
-        public static final int vpi__tab_selected_focused_holo=0x7f02007a;
-        public static final int vpi__tab_selected_holo=0x7f02007b;
-        public static final int vpi__tab_selected_pressed_holo=0x7f02007c;
-        public static final int vpi__tab_unselected_focused_holo=0x7f02007d;
-        public static final int vpi__tab_unselected_holo=0x7f02007e;
-        public static final int vpi__tab_unselected_pressed_holo=0x7f02007f;
-        public static final int wordlik_foto=0x7f020080;
+        public static final int intro=0x7f020060;
+        public static final int logo=0x7f020061;
+        public static final int options=0x7f020062;
+        public static final int options_2=0x7f020063;
+        public static final int search=0x7f020064;
+        public static final int search_2=0x7f020065;
+        public static final int search_button=0x7f020066;
+        public static final int thema1=0x7f020067;
+        public static final int thema10=0x7f020068;
+        public static final int thema11=0x7f020069;
+        public static final int thema2=0x7f02006a;
+        public static final int thema3=0x7f02006b;
+        public static final int thema4=0x7f02006c;
+        public static final int thema5=0x7f02006d;
+        public static final int thema6=0x7f02006e;
+        public static final int thema7=0x7f02006f;
+        public static final int thema8=0x7f020070;
+        public static final int thema9=0x7f020071;
+        public static final int vpi__tab_indicator=0x7f020072;
+        public static final int vpi__tab_selected_focused_holo=0x7f020073;
+        public static final int vpi__tab_selected_holo=0x7f020074;
+        public static final int vpi__tab_selected_pressed_holo=0x7f020075;
+        public static final int vpi__tab_unselected_focused_holo=0x7f020076;
+        public static final int vpi__tab_unselected_holo=0x7f020077;
+        public static final int vpi__tab_unselected_pressed_holo=0x7f020078;
+        public static final int wordlik_foto=0x7f020079;
     }
     public static final class id {
         public static final int GridLayout1=0x7f06004d;
@@ -1263,16 +1256,17 @@ containing a value of this type.
         public static final int actiepager_listview=0x7f030016;
         public static final int agenda=0x7f030017;
         public static final int agendamap=0x7f030018;
-        public static final int introlayout=0x7f030019;
-        public static final int listviewlayout=0x7f03001a;
-        public static final int main=0x7f03001b;
-        public static final int overons=0x7f03001c;
-        public static final int search=0x7f03001d;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001e;
-        public static final int sherlock_spinner_item=0x7f03001f;
-        public static final int socialmedia=0x7f030020;
-        public static final int steunons=0x7f030021;
-        public static final int themas=0x7f030022;
+        public static final int collapsible_edittext=0x7f030019;
+        public static final int introlayout=0x7f03001a;
+        public static final int listviewlayout=0x7f03001b;
+        public static final int main=0x7f03001c;
+        public static final int overons=0x7f03001d;
+        public static final int search=0x7f03001e;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001f;
+        public static final int sherlock_spinner_item=0x7f030020;
+        public static final int socialmedia=0x7f030021;
+        public static final int steunons=0x7f030022;
+        public static final int themas=0x7f030023;
     }
     public static final class raw {
         public static final int petities=0x7f050000;
@@ -1311,8 +1305,7 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f0c0009;
-        public static final int app_name=0x7f0c000b;
-        public static final int hello=0x7f0c000a;
+        public static final int app_name=0x7f0c000a;
     }
     public static final class style {
         public static final int DialogWindowTitle_Sherlock=0x7f0b0036;
@@ -1349,6 +1342,7 @@ containing a value of this type.
         public static final int TextAppearance_Sherlock_Widget_PopupMenu_Small=0x7f0b0044;
         public static final int TextAppearance_Sherlock_Widget_TextView_SpinnerItem=0x7f0b0046;
         public static final int TextAppearance_TabPageIndicator=0x7f0b0003;
+        public static final int Theme_AmnestyStyled=0x7f0b005b;
         public static final int Theme_PageIndicatorDefaults=0x7f0b0000;
         public static final int Theme_Sherlock=0x7f0b0051;
         public static final int Theme_Sherlock_Dialog=0x7f0b0059;
@@ -1405,6 +1399,7 @@ containing a value of this type.
         public static final int Widget_Sherlock_ProgressBar_Horizontal=0x7f0b0033;
         public static final int Widget_Sherlock_Spinner_DropDown_ActionBar=0x7f0b0027;
         public static final int Widget_Sherlock_TextView_SpinnerItem=0x7f0b0035;
+        public static final int Widget_Styled_ActionBar=0x7f0b005c;
         public static final int Widget_TabPageIndicator=0x7f0b0002;
     }
     public static final class styleable {

@@ -1175,6 +1175,7 @@ containing a value of this type.
         public static final int agendamap=0x7f060034;
         public static final int buttonEenmaligDoneren=0x7f06004b;
         public static final int buttonWordLid=0x7f06004a;
+        public static final int buttonthema1=0x7f06004e;
         public static final int contactgegevens=0x7f06003e;
         public static final int contactgegevensText=0x7f06003f;
         public static final int disableHome=0x7f06000c;
@@ -1204,7 +1205,7 @@ containing a value of this type.
         public static final int tableRow2=0x7f060033;
         public static final int textView1=0x7f06002a;
         public static final int textView2=0x7f06002f;
-        public static final int textView3=0x7f06004e;
+        public static final int textView3=0x7f06004f;
         public static final int textView4=0x7f060030;
         public static final int textView5=0x7f06004c;
         public static final int thema1=0x7f06004d;

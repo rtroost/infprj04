@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
+    
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/android:list"
   android:layout_width="fill_parent"
@@ -10,59 +12,6 @@
 	    android:layout_height="fill_parent"
 	    android:gravity="center|top"
 	    android:orientation="vertical" >
-	
-	    <GridLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="50dp"
-	        android:background="@color/amnastyyellow"
-	        android:columnCount="4"
-	        android:rowCount="1" >
-
-	        <Button
-	            android:id="@+id/homebutton"
-	            android:layout_width="50dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="0"
-	            android:layout_row="0"
-	            android:background="@drawable/home_button" />
-
-	        <Button
-	            android:id="@+id/overons"
-	            android:layout_width="50dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="1"
-	            android:layout_gravity="bottom"
-	            android:layout_row="0"
-	            android:background="@drawable/about" />
-
-	        <TextView
-	            android:id="@+id/textView1"
-	            android:layout_width="170dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="2"
-	            android:layout_columnSpan="2"
-	            android:layout_gravity="bottom"
-	            android:layout_row="0"
-	            android:gravity="fill_vertical|center_vertical|center_horizontal"
-	            android:text="Over Amnesty"
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@color/black" />
-
-	        <Button
-	            android:id="@+id/search"
-	            android:layout_width="50dp"
-	            android:layout_height="match_parent"
-	            android:layout_column="3"
-	            android:layout_gravity="right"
-	            android:layout_row="0"
-	            android:background="@drawable/search" />
-
-	        <Space
-	            android:layout_width="52dp"
-	            android:layout_height="1dp"
-	            android:layout_column="1"
-	            android:layout_row="0" />
-	    </GridLayout>
 	    
 	    <GridLayout
 	        android:layout_width="match_parent"
@@ -155,4 +104,6 @@
 		</LinearLayout>
 
 	</LinearLayout>
+	
 </ScrollView>
+

@@ -197,7 +197,7 @@ public class Socialmedia extends Activity {
         
         /*
          * Header bar
-         */
+        
         Button closeButton = (Button)this.findViewById(R.id.search);
         closeButton.setOnClickListener(new OnClickListener() {
           public void onClick(View view) {
@@ -213,7 +213,7 @@ public class Socialmedia extends Activity {
         	   startActivity(overons_i);
            }
         });
-        /*
+       
          * End Header bar
          */
 

@@ -18,7 +18,7 @@ public class Steunons extends Activity {
         
         /*
          * Header bar
-         */
+        
         Button closeButton = (Button)this.findViewById(R.id.search);
         closeButton.setOnClickListener(new OnClickListener() {
           public void onClick(View view) {
@@ -44,7 +44,7 @@ public class Steunons extends Activity {
         });
         
         
-        /*
+        
          * End Header bar
          */
         

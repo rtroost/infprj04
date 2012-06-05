@@ -6,6 +6,7 @@ import android.project4.R;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
@@ -30,7 +31,7 @@ public class Agenda extends Fragment {
 
 	private void setButtonActions() {
 		Button agendaButton = (Button) ll.findViewById(R.id.agendamap);
-		agendaButton.setOnClickListener(new View.OnClickListener() {
+		agendaButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				Intent i = new Intent(getActivity(), Agendamap.class);
 				startActivity(i);

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Vector;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.project4.R;
@@ -12,7 +11,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.View;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
@@ -123,6 +121,4 @@ public class Project4Activity extends SherlockFragmentActivity {
 			return this.CONTENT[position % CONTENT.length];
 		}
 	}
-	
-	
 }

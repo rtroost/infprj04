@@ -1,97 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/android:list"
-  android:layout_width="fill_parent"
-  android:layout_height="wrap_content" >
-  
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:gravity="center|top"
-	    android:orientation="vertical" >
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="2dip"
-        android:background="@color/gray"
-        android:columnCount="2"
-        android:rowCount="1" >
-    </GridLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android:list"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="33dp" >
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/themas"
-            android:layout_width="104dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="Projecten" />
+        <com.google.android.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="0eatc7p5QaALrugNW0kBbevgoDkE0_rJ0K_E19A"
+            android:clickable="true"
+            android:state_enabled="true" />
 
-        <Button
-            android:id="@+id/steunons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.38"
-            android:background="@drawable/button"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="Steun Ons" />
-
-        <Button
-            android:id="@+id/agenda"
-            android:layout_width="102dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:text="Agenda" />
+        <!--
+			PC-REMCO 		0eatc7p5QaALrugNW0kBbevgoDkE0_rJ0K_E19A
+			LAPTOP-REMCO   0eatc7p5QaAImrVE1AirRbyo3pRhl-0tmKQXr4Q
+        -->
     </LinearLayout>
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="2dip"
-        android:background="@color/gray"
-        android:columnCount="2"
-        android:rowCount="1" >
-    </GridLayout>
-	    
-	    <GridLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="2dip"
-	        android:columnCount="3"
-	        android:rowCount="1"
-	        android:background="@color/gray" >
-	    </GridLayout>
- 
- <com.google.android.maps.MapView
-  android:id="@+id/map_view"
-  android:layout_width="fill_parent" 
-  android:layout_height="fill_parent"
-  android:clickable="true" 
-  android:state_enabled="true" 
-  android:apiKey="0eatc7p5QaALrugNW0kBbevgoDkE0_rJ0K_E19A" />
- 
- <!-- 
- PC-REMCO 		0eatc7p5QaALrugNW0kBbevgoDkE0_rJ0K_E19A
- LAPTOP-REMCO   0eatc7p5QaAImrVE1AirRbyo3pRhl-0tmKQXr4Q
- 
- 
- 
- 
-  -->
-   
-<!--   <com.google.android.maps.MapView
-    android:id="@+id/mapview1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:state_enabled="true"
-    android:clickable="true"
-	android:apiKey="0eatc7p5QaAImrVE1AirRbyo3pRhl-0tmKQXr4Q" 
-	/>-->
-   
-   
-</LinearLayout>
 </ScrollView>

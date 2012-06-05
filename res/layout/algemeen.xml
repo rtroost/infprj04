@@ -7,35 +7,22 @@
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:gravity="center|top"
         android:orientation="vertical" >
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/ImageSlider"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="150dip" />
 
-            <ImageView
-                android:id="@+id/ImageSlider"
-                android:layout_width="match_parent"
-                android:layout_height="150dip" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/menuitems"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/socialmedia"
-                android:layout_width="wrap_content"
-                android:layout_height="100px"
-                android:background="@drawable/buttonview"
-                android:text="Volg Amnesty op verschillende social media"
-                android:textSize="12dp" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/socialmedia"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:background="@drawable/buttonview"
+            android:text="Volg Amnesty op verschillende social media"
+            android:textSize="12dp" />
     </LinearLayout>
 
 </ScrollView>

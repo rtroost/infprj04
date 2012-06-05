@@ -12,18 +12,7 @@
         android:orientation="vertical"
         android:id="@+id/menuitems" >
 
-        <ImageView
-            android:id="@+id/ImageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="150dip" />
 
-        <Button
-            android:id="@+id/socialmedia"
-            android:layout_width="wrap_content"
-            android:layout_height="100px"
-            android:background="@drawable/buttonview"
-            android:text="Volg Amnesty op verschillende social media"
-            android:textSize="12dp" />
     </LinearLayout>
 
 </ScrollView>

@@ -43,9 +43,9 @@ public class Algemeen extends Fragment {
 					"com.tempname.project4", 0);
 
 			Button button = new Button(getActivity());
-			button.setText("Klik hier om de Amnesty Wallpaper app te openen.");
+			//button.setText("Klik hier om de Amnesty Wallpaper app te openen.");
 			button.setTextSize(12);
-			button.setBackgroundResource(R.drawable.buttonview);
+			button.setBackgroundResource(R.drawable.openwallpaper);
 			button.setOnClickListener(new OnClickListener() {
 				public void onClick(View arg0) {
 
@@ -64,9 +64,9 @@ public class Algemeen extends Fragment {
 
 		} catch (PackageManager.NameNotFoundException e) {
 			Button button = new Button(getActivity());
-			button.setText("Doneer en Download de Amnesty Wallpaper app.");
+			//button.setText("Doneer en Download de Amnesty Wallpaper app.");
 			button.setTextSize(12);
-			button.setBackgroundResource(R.drawable.buttonview);
+			button.setBackgroundResource(R.drawable.downloadwallpaper);
 			button.setOnClickListener(new OnClickListener() {
 				public void onClick(View arg0) {
 
@@ -84,15 +84,15 @@ public class Algemeen extends Fragment {
 			menuitems.addView(button, buttonpar);
 		}
 
-		GridLayout line = new GridLayout(getActivity());
-		line.setBackgroundResource(R.color.gray);
-
-		GridLayout.LayoutParams first = new GridLayout.LayoutParams();
-		first.width = -1;
-		first.height = 2;
-		first.topMargin = 10;
-		first.bottomMargin = 10;
-
-		menuitems.addView(line, first);
+//		GridLayout line = new GridLayout(getActivity());
+//		line.setBackgroundResource(R.color.gray);
+//
+//		GridLayout.LayoutParams first = new GridLayout.LayoutParams();
+//		first.width = -1;
+//		first.height = 2;
+//		first.topMargin = 10;
+//		first.bottomMargin = 10;
+//
+//		menuitems.addView(line, first);
 	}
 }

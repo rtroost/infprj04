@@ -100,7 +100,6 @@
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema2"
             android:text="Doodstraf"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -166,7 +165,6 @@
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema3"
             android:text="Economische, sociale en culturele rechten"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -232,7 +230,6 @@
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema4"
             android:text="Gevangenschap, marteling en politieke moorden"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -298,7 +295,6 @@
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema5"
             android:text="Internationaal recht en berechting"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -364,7 +360,6 @@
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema6"
             android:text="LGBT"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -429,7 +424,6 @@
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema7"
             android:text="Mensenrechten in Nederland"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -495,7 +489,6 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema8"
             android:text="Mensenrechteneducatie"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -561,7 +554,6 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema9"
             android:text="Mensenrechtenverdedigers"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -626,7 +618,6 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema10"
             android:text="Vrijheid van meningsuiting"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -692,7 +683,6 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:onClick="thema11"
             android:text="Vrouwen"
             android:textSize="14dp"
             android:textStyle="bold" />

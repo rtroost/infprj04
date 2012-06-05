@@ -94,7 +94,7 @@ public class Project4Activity extends SherlockActivity {
 
 		try {
 			ApplicationInfo info = getPackageManager().getApplicationInfo(
-					"com.tempnaam.project4", 0);
+					"com.tempname.project4", 0);
 
 			Button button = new Button(Project4Activity.this);
 			button.setText("Klik hier om de Amnesty Wallpaper app te openen.");

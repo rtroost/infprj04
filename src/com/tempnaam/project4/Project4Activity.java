@@ -101,13 +101,6 @@ public class Project4Activity extends SherlockFragmentActivity {
         mIndicator = (TitlePageIndicator)findViewById(R.id.titles);
         mIndicator.setViewPager(mPager);
         
-        Button socialmediaButton = (Button) findViewById(R.id.socialmedia);
-		socialmediaButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				Intent i = new Intent(Project4Activity.this, Socialmedia.class);
-				startActivity(i);
-			}
-		});
 	}
 
 	class MyPagerAdapter extends FragmentPagerAdapter {

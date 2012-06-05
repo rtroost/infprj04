@@ -32,6 +32,16 @@ public class Algemeen extends Fragment {
 
 		instantiateFragment();
 
+		
+		Button socialmediaButton = (Button) ll.findViewById(R.id.socialmedia);
+		socialmediaButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				Intent i = new Intent(getActivity(), Socialmedia.class);
+				startActivity(i);
+			}
+		});
+		
+		
 		return ll;
 	}
 

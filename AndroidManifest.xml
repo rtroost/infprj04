@@ -39,7 +39,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.tempnaam.project4.Actiepager"
+            android:name="com.tempnaam.project4.Acties"
             android:label="@string/app_name" >
         </activity>
         <activity

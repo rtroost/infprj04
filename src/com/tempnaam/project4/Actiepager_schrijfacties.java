@@ -39,7 +39,7 @@ public class Actiepager_schrijfacties extends Fragment {
 		
 		getActivity().setTitle("Schrijfacties");
 
-		ll = (LinearLayout) inflater.inflate(R.layout.actiepager_listview,
+		ll = (LinearLayout) inflater.inflate(R.layout.acties,
 				container, false);
 				
 		instantiateList();

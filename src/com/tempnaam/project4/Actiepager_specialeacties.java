@@ -37,7 +37,7 @@ public class Actiepager_specialeacties extends Fragment {
 			return null;
 		}
 
-		ll = (LinearLayout) inflater.inflate(R.layout.actiepager_listview,
+		ll = (LinearLayout) inflater.inflate(R.layout.acties,
 				container, false);
 
 		instantiateList();

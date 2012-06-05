@@ -5,96 +5,61 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.project4.R;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
-public class Steunons extends Activity {
-	
+public class Steunons extends Fragment {
+
+	private ScrollView ll;
+	private Activity act;
+
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.steunons);
-        
-        /*
-         * Header bar
-        
-        Button closeButton = (Button)this.findViewById(R.id.search);
-        closeButton.setOnClickListener(new OnClickListener() {
-          public void onClick(View view) {
-        	System.out.println("hallo");
-            finish(); //finish sluit de app;
-          }
-        });
-        
-        Button homebutton = (Button) findViewById(R.id.homebutton);
-        homebutton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent home_i = new Intent(Steunons.this, Project4Activity.class);
-        	   startActivity(home_i);
-           }
-        });
-        
-        Button overons = (Button) findViewById(R.id.overons);
-        overons.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent overons_i = new Intent(Steunons.this, Overons.class);
-        	   startActivity(overons_i);
-           }
-        });
-        
-        
-        
-         * End Header bar
-         */
-        
-        Button themas = (Button) findViewById(R.id.themas);
-        themas.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent i = new Intent(Steunons.this, Themas.class);
-        	   startActivity(i);
-           }
-        });
-        
-        Button steunonsButton = (Button) findViewById(R.id.steunons);
-        steunonsButton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent i = new Intent(Steunons.this, Steunons.class);
-        	   startActivity(i);
-           }
-        });
-        
-        Button agendaButton = (Button) findViewById(R.id.agenda);
-        agendaButton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent i = new Intent(Steunons.this, Agenda.class);
-        	   startActivity(i);
-           }
-        });
-        
-        
-      
-        
-        
-        Button doneerWordtLid = (Button) findViewById(R.id.buttonWordLid);
-        doneerWordtLid.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/steun-amnesty/word-lid" ) );
-               startActivity( browse );
-           }
-        });
-        
-        
-        Button doneerEenmalig = (Button) findViewById(R.id.buttonEenmaligDoneren);
-        doneerEenmalig.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/steun-amnesty/geef/eenmalige-gift" ) );
-               startActivity( browse );
-           }
-        });
-       
-        
-    }
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		if (container == null) {
+			return null;
+		}
+
+		ll = (ScrollView) inflater.inflate(R.layout.steunons, container,
+				false);
+
+		setButtonActions();
+
+		return ll;
+	}
+
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		this.act = activity;
+	}
 	
-	
+	private void setButtonActions() {
+		Button doneerWordtLid = (Button) ll.findViewById(R.id.buttonWordLid);
+		doneerWordtLid.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				Intent browse = new Intent(Intent.ACTION_VIEW, Uri
+						.parse("http://www.amnesty.nl/steun-amnesty/word-lid"));
+				startActivity(browse);
+			}
+		});
+
+		Button doneerEenmalig = (Button) ll.findViewById(R.id.buttonEenmaligDoneren);
+		doneerEenmalig.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View arg0) {
+				Intent browse = new Intent(
+						Intent.ACTION_VIEW,
+						Uri.parse("http://www.amnesty.nl/steun-amnesty/geef/eenmalige-gift"));
+				startActivity(browse);
+			}
+		});
+
+	}
+
 }

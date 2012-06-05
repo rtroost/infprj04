@@ -1,102 +1,35 @@
 package com.tempnaam.project4;
 
-
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.project4.R;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.TextView;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
-public class Themas extends Activity {
+public class Themas extends Fragment {
+	private ScrollView ll;
+	private Activity act;
 
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.themas);
-        
-        Button themas = (Button) findViewById(R.id.themas);
-        themas.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent i = new Intent(Themas.this, Themas.class);
-        	   startActivity(i);
-           }
-        });
-        
-        Button steunonsButton = (Button) findViewById(R.id.steunons);
-        steunonsButton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent i = new Intent(Themas.this, Steunons.class);
-        	   startActivity(i);
-           }
-        });
-        
-        Button agendaButton = (Button) findViewById(R.id.agenda);
-        agendaButton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View arg0) {
-        	   Intent i = new Intent(Themas.this, Agenda.class);
-        	   startActivity(i);
-           }
-        });
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		if (container == null) {
+			return null;
+		}
 
-//        TextView thema1 = (TextView)this.findViewById(R.id.thema1);
-//        thema1.setOnClickListener(new OnClickListener() {
-//          public void onClick(View view) {
-//        	System.out.println("hallo");
-//            finish(); //finish sluit de app;
-//          }
-//        });
+		ll = (ScrollView) inflater.inflate(R.layout.themas, container,
+				false);
 
-    }
-	/*
-	
-	public void thema1(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/bedrijven-en-mensenrechten" ) );
-        startActivity( browse );
-    }
-	public void thema2(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/doodstraf" ) );
-        startActivity( browse );
-    }
-	public void thema3(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/economische-sociale-en-culturele-rechten" ) );
-        startActivity( browse );
-    }
-	public void thema4(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/gevangenen-marteling-moorden-en-verdwijningen" ) );
-        startActivity( browse );
-    }
-	public void thema5(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/internationaal-recht-en-berechting" ) );
-        startActivity( browse );
-    }
-	public void thema6(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/lgbt" ) );
-        startActivity( browse );
-    }
-	public void thema7(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/mensenrechten-in-nederland" ) );
-        startActivity( browse );
-    }
-	public void thema8(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/mensenrechteneducatie" ) );
-        startActivity( browse );
-    }
-	public void thema9(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/mensenrechtenverdedigers" ) );
-        startActivity( browse );
-    }
-	public void thema10(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/vrijheid-meningsuiting" ) );
-        startActivity( browse );
-    }
-	public void thema11(View view){
-    	Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "http://www.amnesty.nl/mensenrechten/themas/vrouwen" ) );
-        startActivity( browse );
-    }
-    */
-	
+		return ll;
+	}
+
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		this.act = activity;
+	}
 }

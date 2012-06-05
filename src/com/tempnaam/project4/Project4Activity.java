@@ -1,42 +1,43 @@
 package com.tempnaam.project4;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.List;
+import java.util.Vector;
 
-import com.actionbarsherlock.app.SherlockActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.StrictMode;
+import android.project4.R;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
+import com.viewpagerindicator.TitlePageIndicator;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.StrictMode;
-import android.project4.R;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.GridLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+public class Project4Activity extends SherlockFragmentActivity {
+	
+	MyPagerAdapter mAdapter;
+	ViewPager mPager;
+	TitlePageIndicator mIndicator;
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
 
-public class Project4Activity extends SherlockActivity {
-
-	// private Button closeButton;
-	public int currentimageindex = 0;
-	Timer timer;
-	TimerTask task;
-	ImageView slidingimage;
-
-	private int[] IMAGE_IDS = { R.drawable.foto1, R.drawable.foto2,
-			R.drawable.foto3, R.drawable.foto4 };
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+					.permitAll().build();
+			StrictMode.setThreadPolicy(policy);
+		}
+		
+		super.onCreate(savedInstanceState);
+		super.setContentView(R.layout.mainpage_layout);
+		
+		this.initialisePaging();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -73,163 +74,53 @@ public class Project4Activity extends SherlockActivity {
 
 		return true;
 	}
+	
+	private void initialisePaging() {
 
-	/** Called when the activity is first created. */
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
+		List<Fragment> fragments = new Vector<Fragment>();
+		fragments.add(Fragment.instantiate(this,
+				Algemeen.class.getName()));
+		fragments.add(Fragment.instantiate(this,
+				Themas.class.getName()));
+		fragments.add(Fragment.instantiate(this,
+				Acties.class.getName()));
+		fragments.add(Fragment.instantiate(this,
+				Agenda.class.getName()));
+		fragments.add(Fragment.instantiate(this,
+				Steunons.class.getName()));
+		
+		MyPagerAdapter mAdapter = new MyPagerAdapter(getSupportFragmentManager(),
+				fragments);
 
-		if (android.os.Build.VERSION.SDK_INT > 9) {
-			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
-					.permitAll().build();
-			StrictMode.setThreadPolicy(policy);
-		}
+		mPager = (ViewPager)findViewById(R.id.pager);
+        mPager.setAdapter(mAdapter);
 
-		super.onCreate(savedInstanceState);
-
-		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-		View v = inflater.inflate(R.layout.main, null);
-
-		LinearLayout menuitems = (LinearLayout) v.findViewById(R.id.menuitems);
-
-		try {
-			ApplicationInfo info = getPackageManager().getApplicationInfo(
-					"com.tempname.project4", 0);
-
-			Button button = new Button(Project4Activity.this);
-			button.setText("Klik hier om de Amnesty Wallpaper app te openen.");
-			button.setTextSize(12);
-			button.setBackgroundResource(R.drawable.buttonview);
-			button.setOnClickListener(new OnClickListener() {
-				public void onClick(View arg0) {
-
-					Intent LaunchIntent = getPackageManager()
-							.getLaunchIntentForPackage("com.tempname.project4");
-					startActivity(LaunchIntent);
-
-				}
-			});
-
-			GridLayout.LayoutParams buttonpar = new GridLayout.LayoutParams();
-			buttonpar.width = -1;
-			buttonpar.height = 100;
-
-			menuitems.addView(button, buttonpar);
-
-		} catch (PackageManager.NameNotFoundException e) {
-			Button button = new Button(Project4Activity.this);
-			button.setText("Doneer en Download de Amnesty Wallpaper app.");
-			button.setTextSize(12);
-			button.setBackgroundResource(R.drawable.buttonview);
-			button.setOnClickListener(new OnClickListener() {
-				public void onClick(View arg0) {
-
-					Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri
-							.parse("https://play.google.com/store?hl=nl"));
-					startActivity(browserIntent);
-
-				}
-			});
-
-			GridLayout.LayoutParams buttonpar = new GridLayout.LayoutParams();
-			buttonpar.width = -1;
-			buttonpar.height = 100;
-
-			menuitems.addView(button, buttonpar);
-		}
-
-		GridLayout line = new GridLayout(this);
-		line.setBackgroundResource(R.color.gray);
-
-		GridLayout.LayoutParams first = new GridLayout.LayoutParams();
-		first.width = -1;
-		first.height = 2;
-		first.topMargin = 10;
-		first.bottomMargin = 10;
-
-		menuitems.addView(line, first);
-
-		setContentView(v);
-
-		Button button3 = (Button) findViewById(R.id.button3);
-		button3.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				Intent button3_i = new Intent(Project4Activity.this,
-						Actiepager.class);
-				startActivity(button3_i);
-			}
-		});
-
-		// begin slider
-		final Handler mHandler = new Handler();
-		// Create runnable for posting
-		final Runnable mUpdateResults = new Runnable() {
-			public void run() {
-
-				AnimateandSlideShow();
-
-			}
-		};
-		int delay = 1000; // delay for 1 sec.
-		int period = 8000; // repeat every 4 sec.
-		Timer timer = new Timer();
-		timer.scheduleAtFixedRate(new TimerTask() {
-			public void run() {
-				mHandler.post(mUpdateResults);
-			}
-		}, delay, period);
-		// end slider
-
-		Button themas = (Button) findViewById(R.id.themas);
-		themas.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				Intent i = new Intent(Project4Activity.this, Themas.class);
-				startActivity(i);
-			}
-		});
-
-		Button steunonsButton = (Button) findViewById(R.id.steunons);
-		steunonsButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				Intent i = new Intent(Project4Activity.this, Steunons.class);
-				startActivity(i);
-			}
-		});
-
-		Button agendaButton = (Button) findViewById(R.id.agenda);
-		agendaButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				Intent i = new Intent(Project4Activity.this, Agenda.class);
-				startActivity(i);
-			}
-		});
-
-		Button socialmediaButton = (Button) findViewById(R.id.socialmedia);
-		socialmediaButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				Intent i = new Intent(Project4Activity.this, Socialmedia.class);
-				startActivity(i);
-			}
-		});
-
+        mIndicator = (TitlePageIndicator)findViewById(R.id.titles);
+        mIndicator.setViewPager(mPager);
 	}
 
-	/**
-	 * Helper method to start the animation on the splash screen
-	 */
-	private void AnimateandSlideShow() {
+	class MyPagerAdapter extends FragmentPagerAdapter {
+		private final List<Fragment> fragments;
+		protected final String[] CONTENT = new String[] { "Algemeen", "Thema's", "Acties", "Agenda", "Steun Ons", };
 
-		slidingimage = (ImageView) findViewById(R.id.ImageSlider);
-		slidingimage.setImageResource(IMAGE_IDS[currentimageindex
-				% IMAGE_IDS.length]);
+		public MyPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
+			super(fm);
+			this.fragments = fragments;
+		}
+		
+	    @Override
+	    public Fragment getItem(int position) {
+	    	return this.fragments.get(position);
+	    }
 
-		currentimageindex++;
-
-		Animation rotateimage = AnimationUtils.loadAnimation(this,
-				R.anim.custom_anim);
-
-		slidingimage.startAnimation(rotateimage);
-
+	    @Override
+	    public int getCount() {
+	        return this.fragments.size();
+	    }
+	    
+	    @Override
+	    public CharSequence getPageTitle(int position) {
+	        return this.CONTENT[position % CONTENT.length];
+	    }
 	}
-
 }

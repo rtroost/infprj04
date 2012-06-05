@@ -2,18 +2,13 @@ package com.tempnaam.project4;
 
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.project4.R;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
-
-import com.google.android.maps.MapActivity;
-import com.google.android.maps.MapView;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
@@ -22,15 +17,11 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
 
-
-
 public class Agendamap extends MapActivity {
 
 	private MapView mapView;
 	private static final Point[] punten = {new Point(51695624, 5297320)};
 	private static final String[] teksten = {"Film Justice for Sale - Den Bosch, Verkadefabriek"};
-	private static final int latitudeE6 = 52501176;
-	private static final int longitudeE6 = 4960327;
 	private static GeoPoint zoompoint = null;
 
     @Override

@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceSmall"
-    android:paddingTop="20dip"
+    android:layout_height="fill_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
     android:paddingBottom="20dip"
     android:paddingLeft="8dip"
-    android:paddingRight="8dip" />
+    android:paddingRight="8dip"
+    android:paddingTop="20dip" >
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dip"
+        android:textSize="10dp" />
+
+</LinearLayout>

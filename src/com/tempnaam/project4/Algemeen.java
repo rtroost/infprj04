@@ -1,6 +1,5 @@
 package com.tempnaam.project4;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -19,7 +18,6 @@ import android.widget.ScrollView;
 
 public class Algemeen extends Fragment {
 	private ScrollView ll;
-	private Activity act;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,23 +30,7 @@ public class Algemeen extends Fragment {
 
 		instantiateFragment();
 
-		
-		Button socialmediaButton = (Button) ll.findViewById(R.id.socialmedia);
-		socialmediaButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View arg0) {
-				Intent i = new Intent(getActivity(), Socialmedia.class);
-				startActivity(i);
-			}
-		});
-		
-		
 		return ll;
-	}
-
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-		this.act = activity;
 	}
 
 	public void instantiateFragment() {
@@ -56,17 +38,18 @@ public class Algemeen extends Fragment {
 		LinearLayout menuitems = (LinearLayout) ll.findViewById(R.id.menuitems);
 
 		try {
-			ApplicationInfo info = act.getPackageManager().getApplicationInfo(
+			@SuppressWarnings("unused")
+			ApplicationInfo info = getActivity().getPackageManager().getApplicationInfo(
 					"com.tempname.project4", 0);
 
-			Button button = new Button(act);
+			Button button = new Button(getActivity());
 			button.setText("Klik hier om de Amnesty Wallpaper app te openen.");
 			button.setTextSize(12);
 			button.setBackgroundResource(R.drawable.buttonview);
 			button.setOnClickListener(new OnClickListener() {
 				public void onClick(View arg0) {
 
-					Intent LaunchIntent = act.getPackageManager()
+					Intent LaunchIntent = getActivity().getPackageManager()
 							.getLaunchIntentForPackage("com.tempname.project4");
 					startActivity(LaunchIntent);
 
@@ -80,7 +63,7 @@ public class Algemeen extends Fragment {
 			menuitems.addView(button, buttonpar);
 
 		} catch (PackageManager.NameNotFoundException e) {
-			Button button = new Button(act);
+			Button button = new Button(getActivity());
 			button.setText("Doneer en Download de Amnesty Wallpaper app.");
 			button.setTextSize(12);
 			button.setBackgroundResource(R.drawable.buttonview);
@@ -101,7 +84,7 @@ public class Algemeen extends Fragment {
 			menuitems.addView(button, buttonpar);
 		}
 
-		GridLayout line = new GridLayout(act);
+		GridLayout line = new GridLayout(getActivity());
 		line.setBackgroundResource(R.color.gray);
 
 		GridLayout.LayoutParams first = new GridLayout.LayoutParams();

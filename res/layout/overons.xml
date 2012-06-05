@@ -1,109 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android:list"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
-<ScrollView
-    
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/android:list"
-  android:layout_width="fill_parent"
-  android:layout_height="wrap_content" >
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical" >
 
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:gravity="center|top"
-	    android:orientation="vertical" >
-	    
-	    <GridLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="2dip"
-	        android:background="@color/gray"
-	        android:columnCount="2"
-	        android:rowCount="1" >
-	
-	    </GridLayout>
+        <TextView
+            android:id="@+id/contactgegevens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Contactgegevens:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-	    <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="33dp" >
+        <TextView
+            android:id="@+id/contactgegevensText"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Telefoon: 020 - 626 44 36                              Email: amnesty@amnesty.nl                           Postbus 1968                                                                             1000 BZ Amsterdam                                                         IBAN-code: NL42INGB0000454000         BIC(SWIFT):INGBNL2A"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textIsSelectable="true"
+            android:textSize="15dp" />
 
-	        <Button
-	            android:id="@+id/themas"
-	            android:layout_width="104dp"
-	            android:layout_height="wrap_content"
-	            android:background="@drawable/button"
-	            android:text="Projecten" />
+        <TextView
+            android:id="@+id/overamnesty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="Over Amnasty International:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-	        <Button
-	            android:id="@+id/steunons"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.38"
-	            android:background="@drawable/button"
-	            android:text="Steun Ons" />
+        <TextView
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Amnesty International is een onafhankelijke beweging die zich inzet voor slachtoffers van schendingen van mensenrechten. Amnesty heeft 3 miljoen leden, donateurs en vaste begunstigers in meer dan 150 landen. Amnesty Nederland is met bijna 300.000 leden één van de grootste afdelingen.                                                                                                                                                                                     Amnesty International werkt voor naleving van de Universele Verklaring van de Rechten van de Mens en andere internationale verdragen en verklaringen voor de mensenrechten. Wij doen over de hele wereld onderzoek naar schendingen van de mensenrechten en voeren actie om die schendingen tegen te gaan."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15dp" />
+    </LinearLayout>
 
-	        <Button
-	            android:id="@+id/agenda"
-	            android:layout_width="102dp"
-	            android:layout_height="wrap_content"
-	            android:background="@drawable/button"
-	            android:text="Agenda" />
-	    </LinearLayout>
-
-	    <GridLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="2dip"
-	        android:background="@color/gray"
-	        android:columnCount="3"
-	        android:rowCount="1" >
-	    </GridLayout>
-		
-		<LinearLayout
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:orientation="vertical" >
-		
-		    <TextView
-		        android:id="@+id/contactgegevens"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:text="Contactgegevens:"
-		        android:textAppearance="?android:attr/textAppearanceLarge" 
-		        android:paddingBottom="10dp" 
-		        android:paddingLeft="10dp" 
-		        android:paddingTop="10dp"/>
-			
-		    <TextView
-		        android:id="@+id/contactgegevensText"
-		        android:layout_width="291dp"
-		        android:layout_height="wrap_content"
-		        android:text="Telefoon: 020 - 626 44 36                              Email: amnesty@amnesty.nl                           Postbus 1968                                                                             1000 BZ Amsterdam                                                         IBAN-code: NL42INGB0000454000         BIC(SWIFT):INGBNL2A"
-		        android:textAppearance="?android:attr/textAppearanceLarge"
-		        android:textSize="15dp" 
-		        android:paddingLeft="20dp"
-		        android:paddingRight="20dp" 
-		        android:paddingBottom="10dp" android:textIsSelectable="true"/>
-		
-		    <TextView
-		        android:id="@+id/overamnesty"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:text="Over Amnasty International:"
-	        android:paddingBottom="10dp" 
-	        android:paddingLeft="10dp"
-	        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-	    <TextView
-	        android:id="@+id/editText1"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:text="Amnesty International is een onafhankelijke beweging die zich inzet voor slachtoffers van schendingen van mensenrechten. Amnesty heeft 3 miljoen leden, donateurs en vaste begunstigers in meer dan 150 landen. Amnesty Nederland is met bijna 300.000 leden één van de grootste afdelingen.                                                                                                                                                                                     Amnesty International werkt voor naleving van de Universele Verklaring van de Rechten van de Mens en andere internationale verdragen en verklaringen voor de mensenrechten. Wij doen over de hele wereld onderzoek naar schendingen van de mensenrechten en voeren actie om die schendingen tegen te gaan."
-	        android:textAppearance="?android:attr/textAppearanceLarge"
-	        android:textSize="15dp" 
-	        android:paddingLeft="20dp" 
-	        android:paddingRight="20dp"/>
-		</LinearLayout>
-
-	</LinearLayout>
-	
 </ScrollView>
-

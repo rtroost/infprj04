@@ -1178,6 +1178,16 @@ containing a value of this type.
         public static final int buttonEenmaligDoneren=0x7f060048;
         public static final int buttonWordLid=0x7f060047;
         public static final int buttonthema1=0x7f06004b;
+        public static final int buttonthema10=0x7f060055;
+        public static final int buttonthema11=0x7f060056;
+        public static final int buttonthema2=0x7f06004d;
+        public static final int buttonthema3=0x7f06004e;
+        public static final int buttonthema4=0x7f06004f;
+        public static final int buttonthema5=0x7f060050;
+        public static final int buttonthema6=0x7f060051;
+        public static final int buttonthema7=0x7f060052;
+        public static final int buttonthema8=0x7f060053;
+        public static final int buttonthema9=0x7f060054;
         public static final int contactgegevens=0x7f06003b;
         public static final int contactgegevensText=0x7f06003c;
         public static final int disableHome=0x7f06000c;

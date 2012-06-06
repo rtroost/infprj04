@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Vector;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.project4.R;
@@ -46,10 +48,7 @@ public class Project4Activity extends SherlockFragmentActivity {
 
 					@Override
 					public boolean onMenuItemClick(MenuItem item) {
-						Intent intent = new Intent(Intent.ACTION_MAIN);
-						intent.addCategory(Intent.CATEGORY_HOME);
-						startActivity(intent);
-
+						mPager.setCurrentItem(0);
 						return true;
 					}
 				}).setIcon(android.R.drawable.ic_lock_power_off)

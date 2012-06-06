@@ -84,6 +84,7 @@ public class Project4Activity extends SherlockFragmentActivity {
 		fragments.add(Fragment.instantiate(this, Agenda.class.getName()));
 		fragments.add(Fragment.instantiate(this, Socialmedia.class.getName()));
 		fragments.add(Fragment.instantiate(this, Steunons.class.getName()));
+		fragments.add(Fragment.instantiate(this, Nieuwsbrief.class.getName()));
 
 		MyPagerAdapter mAdapter = new MyPagerAdapter(
 				getSupportFragmentManager(), fragments);
@@ -98,7 +99,7 @@ public class Project4Activity extends SherlockFragmentActivity {
 	class MyPagerAdapter extends FragmentPagerAdapter {
 		private final List<Fragment> fragments;
 		protected final String[] CONTENT = new String[] { "Algemeen",
-				"Thema's", "Acties", "Agenda", "Social Media", "Steun Ons", };
+				"Thema's", "Acties", "Agenda", "Social Media", "Steun Ons", "Nieuwsbrief", };
 
 		public MyPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
 			super(fm);

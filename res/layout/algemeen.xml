@@ -44,7 +44,7 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:text="Voor meer informatie over Amnesty International kun u de contactpagina bezoeken." />

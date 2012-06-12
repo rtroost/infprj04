@@ -39,7 +39,7 @@
             android:layout_marginBottom="2dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="Deze app heeft het doel om comminucatie te leveren tussen u en Amnesty International. In de app heeft u aantal functies en mogelijkheden beschikbaar zoals overzichten van alle acties, projecten bekijken, sociale media volgen en ook doneren aan Amnesty International voor bijdrage aan de acties." />
+            android:text="Deze app heeft het doel om comminucatie te leveren tussen u en Amnesty International. In de app heeft u aantal functies en mogelijkheden beschikbaar zoals het zien van overzichten van alle acties en projecten, sociale media volgen en ook doneren aan Amnesty International voor bijdrage aan de acties." />
 
         <TextView
             android:id="@+id/textView1"

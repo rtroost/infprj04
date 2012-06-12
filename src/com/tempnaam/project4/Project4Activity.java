@@ -51,7 +51,7 @@ public class Project4Activity extends SherlockFragmentActivity {
 						mPager.setCurrentItem(0);
 						return true;
 					}
-				}).setIcon(android.R.drawable.ic_lock_power_off)
+				}).setIcon(android.R.drawable.ic_media_previous)
 				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		menu.add("Info")
 				.setOnMenuItemClickListener(new OnMenuItemClickListener() {

@@ -7,8 +7,8 @@
     </style>
 
     <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid">
-        <item name="background">#FFF200</item>
-        <item name="android:background">#FFF200</item>
+        <item name="background">#FEFE00</item>
+        <item name="android:background">#FEFE00</item>
     </style> 
 
 </resources>

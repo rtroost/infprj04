@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/android:list"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
 
@@ -11,11 +10,9 @@
         android:padding="10dp" >
 
         <TextView
-            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
-            android:layout_weight="0.28"
             android:text="Op deze pagina staan alle thema&apos;s van amnesty international. Door op een thema te klikken ga je naar de website en kan je veel meer informatie vinden."
             android:textSize="13dp" />
 
@@ -29,12 +26,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/thema1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Bedrijven en mensenrechten"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -45,29 +39,24 @@
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="148dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.89"
-                android:singleLine="false"
                 android:text="Bedrijven hebben de verantwoordelijkheid om de mensenrechten te respecteren. Hun eigen bedrijfsvoering, en die van de keten van hun toeleveranciers en andere zakenrelaties, mag niet bijdragen aan mensenrechtenschendingen. Amnesty International spreekt de bedrijven met name aan op hun verantwoordelijkheid ten opzichte van lokale gemeenschappen."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema1" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -94,12 +83,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Doodstraf"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -110,29 +96,24 @@
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="148dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.89"
-                android:singleLine="false"
                 android:text="De doodstraf is, in juridische termen, een gerechtelijke executie. Van de doodstraf is sprake wanneer iemand van het leven wordt beroofd op grond van een vonnis dat is uitgesproken door een bevoegde rechter na een strafrechtelijk proces. Amnesty zet zich in voor de onvoorwaardelijke afschaffing van de doodstraf waar ook ter wereld."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema2" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -159,12 +140,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Economische, sociale en culturele rechten"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -175,12 +153,9 @@
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.56"
-                android:singleLine="false"
                 android:text="Economische, sociale en culturele rechten (ESC-rechten) zijn mensenrechten die de minimumvoorwaarden voor een menswaardig bestaan garanderen. Tot de rechten behoren het recht op sociale zekerheid, werk en billijke arbeidsvoorwaarden, het vormen van vakbonden, een levensstandaard met voldoende voedsel, huisvesting en kleding, lichamelijke en geestelijke gezondheid en onderwijs."
                 android:textSize="10dp" />
 
@@ -191,13 +166,11 @@
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema3" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -224,12 +197,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Gevangenschap, marteling en politieke moorden"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -240,29 +210,24 @@
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.13"
-                android:singleLine="false"
                 android:text="Gevangenen zijn wereldwijd veelvuldig slachtoffer van mensenrechtenschendingen. Vooral het risico op marteling of andere vormen van mishandeling in de gevangenis of op het politiebureau is groot. Extra gevaar voor marteling is er bij gedwongen verdwijning, waarbij de autoriteiten iemands gevangenname niet toegeven. Vaak volgt op verdwijning executie. Amnesty ijvert voor  een eerlijk proces voor iedere verdachte en komt in actie als mensen &apos;gewetensgevangene&apos; worden, of slachtoffer van marteling, politieke moord of verdwijning."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema4" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -289,12 +254,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Internationaal recht en berechting"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -305,12 +267,9 @@
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.31"
-                android:singleLine="false"
                 android:text="Straffeloosheid is wijdverbreid. Soms blijft berechting helemaal achterwege. Soms worden daders vrijgesproken of krijgen ze slechts een minimale straf of disciplinaire maatregel opgelegd. Wereldwijd gaat het overgrote deel van de verantwoordelijken nog vrijuit. Maar daarin komt verandering. Nationale en internationale rechtbanken worden slagvaardiger. Waarheidscommissies en andere offici쭥 instellingen helderen feiten op."
                 android:textSize="10dp" />
 
@@ -321,13 +280,11 @@
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema5" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -354,12 +311,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="LGBT"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -370,28 +324,24 @@
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="154dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:singleLine="false"
                 android:text="De mensenrechten van LGBT&apos;ers, kortweg wel aangeduid als ҨomorechtenҬ staan vaak onder druk. Wereldwijd zijn seksuele minderheden het slachtoffer van schendingen van de mensenrechten. Die schendingen lopen uiteen van subtiele discriminatie tot gevangenschap en marteling. In zo&apos;n tachtig landen is homoseksualiteit bij wet verboden. In sommige landen staat er zelfs de doodstraf op."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema6" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -418,12 +368,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Mensenrechten in Nederland"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -434,29 +381,25 @@
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="217dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:singleLine="false"
                 android:text="De mensenrechten zijn in Nederland in beginsel goed gewaarborgd. Nederland is aangesloten bij internationale verdragen en heeft wetten en rechtspraak met veel garanties voor de mensenrechten.
 Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpunten zijn onder meer de behandeling van vreemdelingen, het feit dat de overheid te weinig doet om discriminatie te voorkomen en te bestrijden, en het feit dat er geen structurele aandacht is voor mensenrechten in het Nederlandse onderwijs."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema7" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -483,12 +426,9 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Mensenrechteneducatie"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -499,29 +439,24 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="148dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.89"
-                android:singleLine="false"
                 android:text="Kennis over de mensenrechten is onontbeerlijk voor de naleving ervan. Amnesty International wil huidige en toekomstige generaties inspireren tot een positieve rol in het sterk houden van het draagvlak voor de mensenrechten. Mensenrechteneducatie in binnen- en buitenland helpt daarbij."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema8" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -548,12 +483,9 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Mensenrechtenverdedigers"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -564,28 +496,24 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="223dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:singleLine="false"
                 android:text="Mensenrechtenverdedigers zetten zich, individueel of in een organisatie, vreedzaam in voor het bevorderen van de naleving van universele rechten. Zij komen op voor vrouwenrechten, vakbondsrechten, milieu- en landrechten en zijn spreekbuis voor gemarginaliseerde groepen in een samenleving, zoals inheemse volken. Mensenrechtenverdedigers streven naar berechting van daders van schendingen en naar herstel en compensatie van de slachtoffers. Zij worden vanwege hun werk vaak bedreigd. Amnesty staat hen zoveel mogelijk bij."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema9" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -612,12 +540,9 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Vrijheid van meningsuiting"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -628,29 +553,24 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="172dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.31"
-                android:singleLine="false"
                 android:text="Over de hele wereld komt Amnesty op voor mensen die bedreigd worden vanwege hun mening of geloof. Er is een fundamentele vrijheid in het geding: die om je uit te drukken in gesprekken, boeken, muziek, kleding, een eredienst en zo meer. De staat mag je geen mening of religie opleggen. Er zijn wel grenzen: je mag niet &apos;haatzaaien&apos;, en de overheid mag regels stellen aan de wijze waarop je je mening of geloof tot uitdrukking brengt."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema10" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
@@ -677,12 +597,9 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
         </GridLayout>
 
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
             android:text="Vrouwen"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -693,29 +610,24 @@ Maar ook in Nederland worden de mensenrechten niet altijd goed nageleefd. Zorgpu
             android:layout_marginBottom="4dp" >
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="160dp"
-                android:layout_height="148dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_weight="0.89"
-                android:singleLine="false"
                 android:text="In veel landen worden mensenrechten aan vrouwen onthouden. Keer op keer leidt discriminatie tot schendingen van de mensenrechten, tot geweld en straffeloosheid. Wereldwijd zijn er tal van schendingen waar met name vrouwen het slachtoffer van zijn. Het georganiseerde verzet van vrouwen tegen deze dreigingen is de laatste jaren sterk gegroeid."
                 android:textSize="10dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.89"
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/thema11" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"

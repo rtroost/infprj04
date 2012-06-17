@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Vector;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.project4.R;
@@ -53,6 +51,7 @@ public class Project4Activity extends SherlockFragmentActivity {
 					}
 				}).setIcon(android.R.drawable.ic_media_previous)
 				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
 		menu.add("Info")
 				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 
@@ -65,12 +64,19 @@ public class Project4Activity extends SherlockFragmentActivity {
 					}
 				}).setIcon(android.R.drawable.ic_menu_info_details)
 				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
 		menu.add("Search")
-				.setIcon(android.R.drawable.ic_menu_search)
-				.setActionView(R.layout.collapsible_edittext)
-				.setShowAsAction(
-						MenuItem.SHOW_AS_ACTION_ALWAYS
-								| MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
+				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+					@Override
+					public boolean onMenuItemClick(MenuItem item) {
+						Intent search_intent = new Intent(
+								Project4Activity.this, Search.class);
+						startActivity(search_intent);
+						return true;
+					}
+				}).setIcon(android.R.drawable.ic_menu_search)
+				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
 		return true;
 	}
@@ -99,7 +105,8 @@ public class Project4Activity extends SherlockFragmentActivity {
 	class MyPagerAdapter extends FragmentPagerAdapter {
 		private final List<Fragment> fragments;
 		protected final String[] CONTENT = new String[] { "Algemeen",
-				"Thema's", "Acties", "Agenda", "Social Media", "Steun Ons", "Nieuwsbrief", };
+				"Thema's", "Acties", "Agenda", "Social Media", "Steun Ons",
+				"Nieuwsbrief", };
 
 		public MyPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
 			super(fm);

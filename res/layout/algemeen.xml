@@ -1,53 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/android:list"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
-
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/menuitems"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center|top"
         android:orientation="vertical"
-        android:padding="16dp" >
+        android:padding="10dp" >
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
             android:text="Welkom op Amnesty International App"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="234dp"
-            android:layout_height="138dp"
-            android:layout_weight="0.67"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
             android:layout_marginBottom="8dp"
             android:src="@drawable/homeimage" />
 
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="126dp"
-            android:layout_marginBottom="2dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Deze app heeft het doel om comminucatie te leveren tussen u en Amnesty International. In de app heeft u aantal functies en mogelijkheden beschikbaar zoals het zien van overzichten van alle acties en projecten, sociale media volgen en ook doneren aan Amnesty International voor bijdrage aan de acties." />
 
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
             android:text="Voor meer informatie over Amnesty International kun u de contactpagina bezoeken." />
     </LinearLayout>
 

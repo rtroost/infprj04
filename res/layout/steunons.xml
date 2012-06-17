@@ -1,117 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/android:list"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
 
-    <GridLayout
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/GridLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:columnCount="18"
-        android:orientation="horizontal" >
+        android:orientation="vertical"
+        android:padding="10dp" >
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="202dp"
+            android:layout_width="fill_parent"
             android:layout_height="106dp"
-            android:layout_column="2"
-            android:layout_row="3"
-            android:layout_rowSpan="3"
+            android:paddingBottom="8dp"
             android:src="@drawable/wordlik_foto" />
 
         <TextView
-            android:id="@+id/steunOnsView"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_column="0"
-            android:layout_columnSpan="4"
-            android:layout_row="5"
-            android:layout_rowSpan="2"
-            android:ems="10"
+            android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:paddingTop="12dp"
             android:text="Met uw donatie zet Amnesty International zich in voor de duizenden slachtoffers van bijvoorbeeld vervolging, discriminatie en marteling. Amnesty is hét goede doel voor mensenrechten. Om onafhankelijk te blijven, neemt Amnesty voor de uitvoering van onderzoek en acties tegen mensenrechtenschendingen geen giften aan van overheden. Daarom zijn wij in ons werk afhankelijk van donaties van mensen zoals u. Help nú mee de mensenrechten wereldwijd te beschermen en word lid van Amnesty."
-            android:textSize="13dp" />
+            android:textSize="11dp" />
 
         <Button
             android:id="@+id/buttonWordLid"
-            android:layout_width="256dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_row="7"
-            android:layout_rowSpan="2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:text="Word lid en doneer" />
 
         <Button
             android:id="@+id/buttonEenmaligDoneren"
-            android:layout_width="252dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_row="9"
-            android:layout_rowSpan="2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:text="Eenmalig doneren" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_column="1"
-            android:layout_columnSpan="3"
-            android:layout_gravity="left"
-            android:layout_row="11"
-            android:text="Door te klikken op deze buttons wordt u doorverwezen naar de officiele website van Amnesty International."
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textSize="9dp" />
-
-        <Space
-            android:layout_width="21dp"
-            android:layout_height="1dp"
-            android:layout_column="0"
-            android:layout_row="0" />
-
-        <Space
-            android:layout_width="33dp"
-            android:layout_height="1dp"
-            android:layout_column="1"
-            android:layout_row="0" />
-
-        <Space
-            android:layout_width="267dp"
-            android:layout_height="1dp"
-            android:layout_column="2"
-            android:layout_row="0" />
-
-        <Space
-            android:layout_width="1dp"
-            android:layout_height="110dp"
-            android:layout_column="0"
-            android:layout_row="6" />
-
-        <Space
-            android:layout_width="1dp"
-            android:layout_height="18dp"
-            android:layout_column="0"
-            android:layout_row="7" />
-
-        <Space
-            android:layout_width="1dp"
-            android:layout_height="90dp"
-            android:layout_column="0"
-            android:layout_row="4" />
-    </GridLayout>
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:text="Bovenstaande knoppen openen uw vertrouwde internetbrowser om uw actie te voltooien."
+            android:textSize="8dp" />
+    </LinearLayout>
 
 </ScrollView>

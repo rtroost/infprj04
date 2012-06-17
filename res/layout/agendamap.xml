@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.maps.MapView
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/map_view"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"	
-	android:clickable="true"
-	android:state_enabled="true"
-	android:apiKey="0eatc7p5QaAImrVE1AirRbyo3pRhl-0tmKQXr4Q" />
-
+<com.google.android.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:apiKey="0eatc7p5QaAImrVE1AirRbyo3pRhl-0tmKQXr4Q"
+    android:clickable="true"
+    android:state_enabled="true" />
 <!--
 	PC-REMCO 		0eatc7p5QaALrugNW0kBbevgoDkE0_rJ0K_E19A
-	LAPTOP-REMCO   0eatc7p5QaAImrVE1AirRbyo3pRhl-0tmKQXr4Q
+	LAPTOP-REMCO   0eatc7p5QaAImrVE1AirRbyo3pRhl-0tmKQXr4Q
 -->

@@ -6,7 +6,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.project4.R;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,7 +15,9 @@ import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-public class Algemeen extends Fragment {
+import com.actionbarsherlock.app.SherlockFragment;
+
+public class Algemeen extends SherlockFragment {
 	private ScrollView ll;
 	
 	@Override

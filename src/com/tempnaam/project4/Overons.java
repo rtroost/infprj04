@@ -3,7 +3,6 @@ package com.tempnaam.project4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.project4.R;
-import android.view.View;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
@@ -38,11 +37,17 @@ public class Overons extends SherlockActivity {
 		}).setIcon(android.R.drawable.ic_media_previous)
 		.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		menu.add("Search")
-				.setIcon(android.R.drawable.ic_menu_search)
-				.setActionView(R.layout.collapsible_edittext)
-				.setShowAsAction(
-						MenuItem.SHOW_AS_ACTION_ALWAYS
-								| MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
+		.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				Intent search_intent = new Intent(
+						Overons.this, Search.class);
+				startActivity(search_intent);
+				return true;
+			}
+		}).setIcon(android.R.drawable.ic_menu_search)
+		.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
 		return true;
 	}

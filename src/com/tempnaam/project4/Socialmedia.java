@@ -1,8 +1,9 @@
 package com.tempnaam.project4;
 
+import com.actionbarsherlock.app.SherlockFragment;
+
 import android.os.Bundle;
 import android.project4.R;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +15,11 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-public class Socialmedia extends Fragment {
+public class Socialmedia extends SherlockFragment {
 	private WebView facebook;
 	private WebView twitter;
 
-	private LinearLayout ll;
+	private TabHost ll;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,15 +28,15 @@ public class Socialmedia extends Fragment {
 			return null;
 		}
 
-		ll = (LinearLayout) inflater.inflate(R.layout.socialmedia, container,
+		ll = (TabHost) inflater.inflate(R.layout.socialmedia, container,
 				false);
 
-		setUpFragment();
+		setUpFragments();
 
 		return ll;
 	}
 
-	public void setUpFragment() {
+	public void setUpFragments() {
 		Rss rssclass = new Rss();
 
 		rssclass.writeNews();

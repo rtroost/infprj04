@@ -1,136 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/android:list"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="10dp" >
 
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
             android:text="Amnesty in de regio"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="26px" />
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="2dip"
-            android:layout_marginBottom="6dp"
-            android:background="@color/amnastyyellow"
-            android:columnCount="3"
-            android:rowCount="1" >
-        </GridLayout>
+            android:textSize="26dp" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="136dp"
-            android:layout_marginRight="4dp"
-            android:layout_weight="21.45"
-            android:singleLine="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
             android:text="Bedrijven hebben de verantwoordelijkheid om de mensenrechten te respecteren. Hun eigen bedrijfsvoering, en die van de keten van hun toeleveranciers en andere zakenrelaties, mag niet bijdragen aan mensenrechtenschendingen. Amnesty International spreekt de bedrijven met name aan op hun verantwoordelijkheid ten opzichte van lokale gemeenschappen."
             android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
             android:text="Agenda"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="26px" />
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="2dip"
-            android:layout_marginBottom="6dp"
-            android:background="@color/amnastyyellow"
-            android:columnCount="3"
-            android:rowCount="1" >
-        </GridLayout>
+            android:textSize="26dp" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
             android:shrinkColumns="*"
             android:stretchColumns="*" >
 
             <TableRow
-                android:id="@+id/tableRow1"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp" >
+                android:clipChildren="true" >
 
                 <TextView
-                    android:id="@+id/TextView04"
-                    android:layout_width="150dp"
+                    android:layout_width="130dp"
                     android:text="Datum"
-                    android:textSize="12px"
+                    android:textSize="11dp"
                     android:textStyle="bold" >
                 </TextView>
 
                 <TextView
-                    android:id="@+id/TextView04"
-                    android:layout_width="120dp"
                     android:text="Actie"
-                    android:textSize="12px"
+                    android:textSize="11dp"
                     android:textStyle="bold" >
                 </TextView>
 
                 <TextView
-                    android:id="@+id/TextView04"
-                    android:layout_width="170dp"
+                    android:layout_width="130dp"
                     android:text="Regio"
-                    android:textSize="12px"
+                    android:textSize="11dp"
                     android:textStyle="bold" >
                 </TextView>
             </TableRow>
 
             <TableRow
-                android:id="@+id/tableRow2"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:background="@color/table_gray"
-                android:paddingBottom="2dp"
-                android:paddingTop="2dp" >
+                android:background="@color/table_gray" >
 
                 <TextView
-                    android:id="@+id/TextView04"
-                    android:padding="2dp"
                     android:text="16 juni 2012"
-                    android:textSize="12px" >
+                    android:textSize="11dp" >
                 </TextView>
 
                 <TextView
-                    android:id="@+id/TextView04"
-                    android:padding="2dp"
                     android:text="Film Justice for Sale - Den Bosch, Verkadefabriek"
-                    android:textSize="12px" >
+                    android:textSize="11dp" >
                 </TextView>
 
                 <TextView
-                    android:id="@+id/TextView04"
-                    android:padding="2dp"
                     android:text="Brabant - Limburg"
-                    android:textSize="12px" >
+                    android:textSize="11dp" >
                 </TextView>
             </TableRow>
         </TableLayout>
 
         <Button
             android:id="@+id/agendamap"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:text="Op de kaart" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:text="Bovenstaande knop opent uw vertrouwde internetbrowser om uw actie te voltooien."
+            android:textSize="8dp" />
     </LinearLayout>
 
 </ScrollView>

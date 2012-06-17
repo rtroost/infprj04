@@ -1,27 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <articles>
+
     <article>
-        <title>Shell: Own up, pay up, clean up!</title>
-        <description>Olie heeft het land en het water van de Nigerdelta verontreinigd. Oliebedrijven, zoals Shell, hebben deze vervuiling onvoldoende opgeruimd. Lokale bewoners zijn hierdoor niet in staat gewassen te verbouwen of te leven van de visserij. Hun gezondheid en hun toekomst wordt ernstig bedreigd.</description>
-        <startdate>07-05-2012</startdate>
-        <enddate>06-06-2012</enddate>
-        <url>http://www.amnesty.nl/actiecentrum/acties/shell-own-pay-clean</url>
-        <geopoint>70.22212, -20 33253</geopoint>
+        <title>
+Shell: Own up, pay up, clean up!
+        </title>
+
+        <description>
+Olie heeft het land en het water van de Nigerdelta verontreinigd. Oliebedrijven, zoals Shell, hebben deze vervuiling onvoldoende opgeruimd. Lokale bewoners zijn hierdoor niet in staat gewassen te verbouwen of te leven van de visserij. Hun gezondheid en hun toekomst wordt ernstig bedreigd.
+        </description>
+
+        <startdate>
+07-05-2012
+        </startdate>
+
+        <enddate>
+06-06-2012
+        </enddate>
+
+        <url>
+http://www.amnesty.nl/actiecentrum/acties/shell-own-pay-clean
+        </url>
+
+        <geopoint>
+70.22212, -20 33253
+        </geopoint>
     </article>
     <article>
-        <title>Stop marteling in Oekraïne</title>
-        <description>Voordat het EK voetbal 2012 van start gaat wil Amnesty International dat de Oekraïnse overheid helder is over mensenrechten en stopt met het tolereren van schendingen door haar eigen politiemacht.</description>
-        <startdate>01-05-2012</startdate>
-        <enddate>01-08-2012</enddate>
-        <url>http://www.amnesty.nl/actiecentrum/acties/stop-marteling-in-oekraine</url>
-        <geopoint>70.22212, -20 33253</geopoint>
+        <title>
+Stop marteling in Oekraïne
+        </title>
+
+        <description>
+Voordat het EK voetbal 2012 van start gaat wil Amnesty International dat de Oekraïnse overheid helder is over mensenrechten en stopt met het tolereren van schendingen door haar eigen politiemacht.
+        </description>
+
+        <startdate>
+01-05-2012
+        </startdate>
+
+        <enddate>
+01-08-2012
+        </enddate>
+
+        <url>
+http://www.amnesty.nl/actiecentrum/acties/stop-marteling-in-oekraine
+        </url>
+
+        <geopoint>
+70.22212, -20 33253
+        </geopoint>
     </article>
     <article>
-        <title>Stop het bloedvergieten in Syrië</title>
-        <description>‘Hoeveel bloed moeten we betalen voor de wereld helpt?’ Dat vroeg Abu Suhaib, een Syrische gewonde, aan een Amnesty-delegatie in een ziekenhuis in Jordanië. De wereld kijkt nog steeds machteloos toe bij het bloedvergieten in Syrië.</description>
-        <startdate>13-03-2012</startdate>
-        <enddate>15-06-2012</enddate>
-        <url>http://www.amnesty.nl/actiecentrum/acties/stop-het-bloedvergieten-in-syrie</url>
-        <geopoint>70.22212, -20 33253</geopoint>
+        <title>
+Stop het bloedvergieten in Syrië
+        </title>
+
+        <description>
+‘Hoeveel bloed moeten we betalen voor de wereld helpt?’ Dat vroeg Abu Suhaib, een Syrische gewonde, aan een Amnesty-delegatie in een ziekenhuis in Jordanië. De wereld kijkt nog steeds machteloos toe bij het bloedvergieten in Syrië.
+        </description>
+
+        <startdate>
+13-03-2012
+        </startdate>
+
+        <enddate>
+15-06-2012
+        </enddate>
+
+        <url>
+http://www.amnesty.nl/actiecentrum/acties/stop-het-bloedvergieten-in-syrie
+        </url>
+
+        <geopoint>
+70.22212, -20 33253
+        </geopoint>
     </article>
+
 </articles>

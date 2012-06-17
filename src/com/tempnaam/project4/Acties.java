@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.project4.R;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,7 +23,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Acties extends Fragment {
+import com.actionbarsherlock.app.SherlockFragment;
+
+public class Acties extends SherlockFragment {
 	private LinearLayout ll;
 
 	@Override

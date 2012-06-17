@@ -9,6 +9,6 @@
     <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid">
         <item name="background">#FEFE00</item>
         <item name="android:background">#FEFE00</item>
-    </style> 
+    </style>
 
 </resources>

@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
-            android:text="Op deze pagina staan alle thema&apos;s van amnesty international. Door op een thema te klikken ga je naar de website en kan je veel meer informatie vinden."
+            android:text="Op deze pagina staan alle thema&apos;s van Amnesty International. Door op een thema te klikken ga je naar de website waar je veel meer informatie kunt vinden."
             android:textSize="13dp" />
 
         <GridLayout

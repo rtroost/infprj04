@@ -86,12 +86,12 @@ public class Acties extends Fragment {
 			View rowView = inflater.inflate(R.layout.listviewlayout, parent, false);
 			
 			TextView label = (TextView) rowView.findViewById(R.id.label);
-			TextView type = (TextView) rowView.findViewById(R.id.type);
+//			TextView type = (TextView) rowView.findViewById(R.id.type);
 			
 			label.setText(values[position]);
 			
 			
-			type.setText("Schrijfactie");
+//			type.setText("Schrijfactie");
 
 			return rowView;			
 		}

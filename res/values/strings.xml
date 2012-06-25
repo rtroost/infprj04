@@ -3,7 +3,7 @@
 
     <string name="app_name">Amnesty</string>
 
-    <color name="amnastyyellow">#FFF200</color>
+    <color name="amnastyyellow">#FEFE00</color>
     <color name="black">#000000</color>
     <color name="gray">#666</color>
     <color name="table_gray">#E3E0DC</color>

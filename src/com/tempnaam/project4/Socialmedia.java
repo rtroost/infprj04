@@ -1,7 +1,6 @@
 package com.tempnaam.project4;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.project4.R;
 import android.view.LayoutInflater;
@@ -15,7 +14,7 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-public class Socialmedia extends SherlockFragment {
+public class Socialmedia extends Fragment {
 	private WebView facebook;
 	private WebView twitter;
 

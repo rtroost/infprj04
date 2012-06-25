@@ -3,22 +3,24 @@ package com.tempnaam.project4;
 import java.util.List;
 import java.util.Vector;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.project4.R;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.SearchView;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 import com.viewpagerindicator.TitlePageIndicator;
 
-public class Project4Activity extends SherlockFragmentActivity {
+public class Project4Activity extends FragmentActivity {
 
 	private MyPagerAdapter mAdapter;
 	private ViewPager mPager;
@@ -36,49 +38,34 @@ public class Project4Activity extends SherlockFragmentActivity {
 		super.onCreate(savedInstanceState);
 		super.setContentView(R.layout.mainpage_layout);
 
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+
 		this.initialisePaging();
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add("Back")
-				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-
-					@Override
-					public boolean onMenuItemClick(MenuItem item) {
-						mPager.setCurrentItem(0);
-						return true;
-					}
-				}).setIcon(android.R.drawable.ic_media_previous)
-				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-
-		menu.add("Info")
-				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-
-					@Override
-					public boolean onMenuItemClick(MenuItem item) {
-						Intent overons_i = new Intent(Project4Activity.this,
-								Overons.class);
-						startActivity(overons_i);
-						return true;
-					}
-				}).setIcon(android.R.drawable.ic_menu_info_details)
-				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-
-		menu.add("Search")
-				.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-
-					@Override
-					public boolean onMenuItemClick(MenuItem item) {
-						Intent search_intent = new Intent(
-								Project4Activity.this, Search.class);
-						startActivity(search_intent);
-						return true;
-					}
-				}).setIcon(android.R.drawable.ic_menu_search)
-				.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-
+		getMenuInflater().inflate(R.menu.menu_layout, menu);
+		SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
+		
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			mPager.setCurrentItem(0);
+			return true;
+		case R.id.about:
+			Intent intent_about = new Intent(this,
+					Overons.class);
+			startActivity(intent_about);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 	private void initialisePaging() {
@@ -92,8 +79,7 @@ public class Project4Activity extends SherlockFragmentActivity {
 		fragments.add(Fragment.instantiate(this, Steunons.class.getName()));
 		fragments.add(Fragment.instantiate(this, Nieuwsbrief.class.getName()));
 
-		mAdapter = new MyPagerAdapter(
-				getSupportFragmentManager(), fragments);
+		mAdapter = new MyPagerAdapter(getSupportFragmentManager(), fragments);
 
 		mPager = (ViewPager) findViewById(R.id.pager);
 		mPager.setAdapter(mAdapter);

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AmnestyStyled" parent="Theme.Sherlock.Light">
-        <item name="actionBarStyle">@style/Widget.Styled.ActionBar</item>
-        <item name="android:actionBarStyle">@style/Widget.Styled.ActionBar</item>
+    <!-- the theme applied to the application or activity -->
+    <style name="Theme.AmnestyStyled" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/CustomActionBarStyle</item>
     </style>
 
-    <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid">
-        <item name="background">#FEFE00</item>
-        <item name="android:background">#FEFE00</item>
+    <style name="CustomActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/amnastyyellow</item>
     </style>
 
 </resources>

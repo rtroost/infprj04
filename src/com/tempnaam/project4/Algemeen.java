@@ -1,5 +1,6 @@
 package com.tempnaam.project4;
 
+import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -15,9 +16,7 @@ import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
-public class Algemeen extends SherlockFragment {
+public class Algemeen extends Fragment {
 	private ScrollView ll;
 	
 	@Override

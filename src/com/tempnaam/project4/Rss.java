@@ -106,9 +106,4 @@ public class Rss {
 		return getCharacterDataFromElement((Element) parent
 				.getElementsByTagName(label).item(0));
 	}
-
-//	public static void main(String[] args) {
-//		Rss reader = Rss.getInstance();
-//		reader.writeNews();
-//	}
 }

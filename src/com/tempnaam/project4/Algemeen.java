@@ -34,7 +34,7 @@ public class Algemeen extends SherlockFragment {
 		return ll;
 	}
 
-	public void instantiateFragment() {
+	private void instantiateFragment() {
 
 		LinearLayout menuitems = (LinearLayout) ll.findViewById(R.id.menuitems);
 
@@ -84,16 +84,5 @@ public class Algemeen extends SherlockFragment {
 
 			menuitems.addView(button, buttonpar);
 		}
-
-//		GridLayout line = new GridLayout(getActivity());
-//		line.setBackgroundResource(R.color.gray);
-//
-//		GridLayout.LayoutParams first = new GridLayout.LayoutParams();
-//		first.width = -1;
-//		first.height = 2;
-//		first.topMargin = 10;
-//		first.bottomMargin = 10;
-//
-//		menuitems.addView(line, first);
 	}
 }

@@ -20,9 +20,9 @@ import com.viewpagerindicator.TitlePageIndicator;
 
 public class Project4Activity extends SherlockFragmentActivity {
 
-	MyPagerAdapter mAdapter;
-	ViewPager mPager;
-	TitlePageIndicator mIndicator;
+	private MyPagerAdapter mAdapter;
+	private ViewPager mPager;
+	private TitlePageIndicator mIndicator;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -92,7 +92,7 @@ public class Project4Activity extends SherlockFragmentActivity {
 		fragments.add(Fragment.instantiate(this, Steunons.class.getName()));
 		fragments.add(Fragment.instantiate(this, Nieuwsbrief.class.getName()));
 
-		MyPagerAdapter mAdapter = new MyPagerAdapter(
+		mAdapter = new MyPagerAdapter(
 				getSupportFragmentManager(), fragments);
 
 		mPager = (ViewPager) findViewById(R.id.pager);

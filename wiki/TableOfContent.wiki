@@ -2,6 +2,6 @@
 
 = Inhoudsopgaven =
 
-  * Test pagina
+  * http://code.google.com/p/infprj04/wiki/TestBlog
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages

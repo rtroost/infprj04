@@ -1,7 +1,7 @@
-#summary One-sentence summary of this page.
+#summary inhoudsopgaven.
 
 = Inhoudsopgaven =
 
   * http://code.google.com/p/infprj04/wiki/TestBlog
-  * Headings, paragraphs, and lists
+  * [http://code.google.com/p/infprj04/wiki/TestBlog]
   * Automatic links to other wiki pages

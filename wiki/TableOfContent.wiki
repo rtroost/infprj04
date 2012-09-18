@@ -3,5 +3,5 @@
 = Inhoudsopgaven =
 
   * [TestBlog]
-  * [http://code.google.com/p/infprj04/wiki/TestBlog]
-  * Automatic links to other wiki pages
+  * [TestBlog]
+  * [TestBlog]
